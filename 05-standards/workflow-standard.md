@@ -1,0 +1,34 @@
+# Workflow Standard
+
+## 工作流必须包含
+
+- 目的。
+- 适用场景。
+- 输入要求。
+- 执行步骤。
+- 输出结果。
+- 质量检查。
+
+## 推荐结构
+
+```md
+# Workflow Name
+
+## Purpose
+
+## Use Case
+
+## Inputs
+
+## Steps
+
+## Output
+
+## Quality Check
+```
+
+## 注意事项
+
+- Workflow 描述方法，不直接替代 prompt。
+- Workflow 可以引用 template、standard 和 evaluation。
+- 角色工作流应优先复用 common workflow，再补充角色特有步骤。

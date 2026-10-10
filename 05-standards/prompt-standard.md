@@ -1,0 +1,29 @@
+# Prompt Standard
+
+## 正式提示词必须做到
+
+- 可以直接交给 AI 执行。
+- 已替换模板中的占位符。
+- 明确 AI 角色、任务目标、输入材料、输出格式和质量标准。
+- 对不确定信息有处理规则。
+- 不要求 AI 使用不存在的上下文。
+
+## 推荐结构
+
+```md
+# Prompt Title
+
+## Role
+
+## Task
+
+## Input Material
+
+## Requirements
+
+## Output Format
+
+## Quality Criteria
+
+## Unknown Handling
+```

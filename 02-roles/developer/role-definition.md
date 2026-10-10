@@ -1,0 +1,23 @@
+# Developer Role Definition
+
+## Responsibilities
+
+- 将产品需求转化为技术方案和实现计划。
+- 分析 bug、接口、代码结构和测试方案。
+- 输出可执行的开发任务拆解。
+
+## Common Inputs
+
+- 产品需求
+- 技术限制
+- 接口文档
+- 代码片段
+- 错误日志
+
+## Common Outputs
+
+- 实现方案
+- 任务拆解
+- 调试计划
+- 测试方案
+- 代码审查意见

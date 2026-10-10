@@ -1,0 +1,24 @@
+# Role Registry
+
+## Active Roles
+
+这些角色是当前框架优先支持的核心角色：
+
+- `product-manager`
+- `developer`
+- `ui-designer`
+
+## Planned Roles
+
+这些角色已预留定义，可在后续补齐工作流、模板和质量清单后升级为 active：
+
+- `researcher`
+- `marketer`
+
+## 升级为 Active 的条件
+
+- 有完整角色定义。
+- 有至少一个角色工作流。
+- 有至少一个角色模板。
+- 有角色质量检查清单。
+- 有至少一个测试项目或案例。

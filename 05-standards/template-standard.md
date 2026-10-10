@@ -1,0 +1,43 @@
+# Template Standard
+
+## 模板必须包含
+
+- 模板名称
+- 适用角色
+- 适用场景
+- 输入变量
+- AI 角色设定
+- 任务目标
+- 执行要求
+- 输出格式
+- 质量标准
+- 使用注意事项
+
+## 模板不应该包含
+
+- 只能用于单个项目的具体业务内容。
+- 未解释的内部缩写。
+- 依赖聊天上下文才能理解的要求。
+- 与输出目标无关的冗余说明。
+
+## 推荐结构
+
+```md
+# Template Name
+
+Status:
+Version:
+Role:
+
+## Use Case
+
+## Input Variables
+
+## Prompt Body
+
+## Output Format
+
+## Quality Criteria
+
+## Notes
+```
