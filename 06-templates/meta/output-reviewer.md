@@ -1,32 +1,32 @@
-# Output Reviewer
+# 输出评审器
 
-Status: draft
-Version: v1
-Role: meta
+状态: draft
+版本: v1
+角色: meta
 
-## Use Case
+## 适用场景
 
 用于评审 AI 输出结果是否合格，是否可以进入 accepted 或 example。
 
-## Prompt Body
+## 提示词正文
 
 你是一名 AI 输出质量评审专家。
 
 请基于输入资料、正式提示词和 AI 输出，评估该输出是否符合要求。
 
-## Input Material
+## 输入材料
 
 {粘贴或引用输入资料}
 
-## Final Prompt
+## 正式提示词
 
 {粘贴或引用正式提示词}
 
-## AI Output
+## AI 输出
 
 {粘贴或引用 AI 输出}
 
-## Review Criteria
+## 评审标准
 
 请从以下维度评分，每项 1 到 5 分：
 
@@ -37,7 +37,7 @@ Role: meta
 - 可追溯性
 - 可复用性
 
-## Output Format
+## 输出格式
 
 1. 总体结论
 2. 分项评分

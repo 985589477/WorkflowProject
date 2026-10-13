@@ -1,4 +1,4 @@
-# Template Standard
+# 模板标准
 
 ## 模板必须包含
 
@@ -23,21 +23,21 @@
 ## 推荐结构
 
 ```md
-# Template Name
+# 模板名称
 
-Status:
-Version:
-Role:
+状态:
+版本:
+角色:
 
-## Use Case
+## 适用场景
 
-## Input Variables
+## 输入变量
 
-## Prompt Body
+## 提示词正文
 
-## Output Format
+## 输出格式
 
-## Quality Criteria
+## 质量标准
 
-## Notes
+## 使用注意事项
 ```

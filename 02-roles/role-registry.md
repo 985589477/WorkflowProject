@@ -1,6 +1,6 @@
-# Role Registry
+# 角色注册表
 
-## Active Roles
+## 当前活跃角色
 
 这些角色是当前框架优先支持的核心角色：
 
@@ -8,7 +8,7 @@
 - `developer`
 - `ui-designer`
 
-## Planned Roles
+## 计划支持角色
 
 这些角色已预留定义，可在后续补齐工作流、模板和质量清单后升级为 active：
 

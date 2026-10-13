@@ -1,4 +1,4 @@
-# Document Lifecycle
+# 文档生命周期
 
 ## 标准生命周期
 

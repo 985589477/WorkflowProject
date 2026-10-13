@@ -1,4 +1,4 @@
-# Workflow Standard
+# 工作流标准
 
 ## 工作流必须包含
 
@@ -12,19 +12,19 @@
 ## 推荐结构
 
 ```md
-# Workflow Name
+# 工作流名称
 
-## Purpose
+## 目的
 
-## Use Case
+## 适用场景
 
-## Inputs
+## 输入要求
 
-## Steps
+## 执行步骤
 
-## Output
+## 输出结果
 
-## Quality Check
+## 质量检查
 ```
 
 ## 注意事项

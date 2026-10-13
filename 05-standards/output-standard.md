@@ -1,4 +1,4 @@
-# Output Standard
+# 输出标准
 
 ## 合格输出标准
 

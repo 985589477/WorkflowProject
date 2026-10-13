@@ -1,4 +1,4 @@
-# Versioning Rules
+# 版本规则
 
 ## 版本使用场景
 
@@ -30,10 +30,10 @@ prd-generation-template.v2.md
 ## 推荐文档头部
 
 ```md
-# Document Title
+# 文档标题
 
-Status: draft | active | reviewed | deprecated
-Version: v1
-Owner: role or person
-Updated: YYYY-MM-DD
+状态: draft | active | reviewed | deprecated
+版本: v1
+负责人: 角色或人员
+更新日期: YYYY-MM-DD
 ```

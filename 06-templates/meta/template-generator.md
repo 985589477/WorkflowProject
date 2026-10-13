@@ -1,24 +1,24 @@
-# Template Generator
+# 模板生成器
 
-Status: draft
-Version: v1
-Role: meta
+状态: draft
+版本: v1
+角色: meta
 
-## Use Case
+## 适用场景
 
 当你有原始资料，但不知道如何抽象成可复用模板时，使用本 meta 模板。
 
-## Prompt Body
+## 提示词正文
 
 你是一名资深 AI 提示词架构师。
 
 我会提供一份原始资料。请你基于资料，抽象出一个可复用的提示词模板。
 
-## Input Material
+## 输入材料
 
 {粘贴或引用原始资料}
 
-## Tasks
+## 任务
 
 1. 判断资料适合生成哪类模板。
 2. 识别适用角色。
@@ -31,7 +31,7 @@ Role: meta
 9. 设计质量标准。
 10. 输出最终可复用模板。
 
-## Output Format
+## 输出格式
 
 请按照以下结构输出：
 

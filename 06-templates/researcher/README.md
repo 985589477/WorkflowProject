@@ -1,4 +1,4 @@
-# Researcher Templates
+# 研究员模板
 
 这里预留研究角色模板。
 

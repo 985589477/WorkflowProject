@@ -1,4 +1,4 @@
-# Prompt Standard
+# 正式提示词标准
 
 ## 正式提示词必须做到
 
@@ -11,19 +11,19 @@
 ## 推荐结构
 
 ```md
-# Prompt Title
+# 正式提示词标题
 
-## Role
+## 角色
 
-## Task
+## 任务
 
-## Input Material
+## 输入材料
 
-## Requirements
+## 执行要求
 
-## Output Format
+## 输出格式
 
-## Quality Criteria
+## 质量标准
 
-## Unknown Handling
+## 未知信息处理
 ```

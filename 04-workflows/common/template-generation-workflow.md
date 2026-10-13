@@ -1,10 +1,10 @@
-# Template Generation Workflow
+# 模板生成工作流
 
-## Purpose
+## 目的
 
 从原始资料或优秀案例中抽象可复用模板。
 
-## Steps
+## 步骤
 
 1. 分析资料类型。
 2. 判断适用角色。
@@ -14,6 +14,6 @@
 6. 使用 `05-standards/template-standard.md` 检查。
 7. 使用测试输入验证模板。
 
-## Output
+## 输出
 
 输出一份可进入 `06-templates/` 的模板草稿。

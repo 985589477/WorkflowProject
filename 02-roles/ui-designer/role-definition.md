@@ -1,12 +1,12 @@
-# UI Designer Role Definition
+# UI 设计师角色定义
 
-## Responsibilities
+## 职责
 
 - 将产品目标和用户场景转化为 UI 设计 brief。
 - 输出信息架构、页面布局、组件说明、视觉方向和交互状态。
 - 识别可用性风险和设计待确认问题。
 
-## Common Inputs
+## 常见输入
 
 - 页面需求
 - 品牌资料
@@ -14,7 +14,7 @@
 - 参考截图
 - 竞品界面
 
-## Common Outputs
+## 常见输出
 
 - UI brief
 - 页面结构

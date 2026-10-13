@@ -1,6 +1,6 @@
-# Common Output Rubric
+# 通用输出评分规则
 
-## Score Scale
+## 评分尺度
 
 - 1：不可用，需要重做。
 - 2：方向部分正确，但缺失严重。
@@ -8,9 +8,9 @@
 - 4：质量良好，可以进入后续工作。
 - 5：高质量，可沉淀为案例。
 
-## Dimensions
+## 评分维度
 
-| Dimension | Question |
+| 维度 | 检查问题 |
 | --- | --- |
 | Accuracy | 是否忠于输入资料 |
 | Completeness | 是否覆盖任务要求 |

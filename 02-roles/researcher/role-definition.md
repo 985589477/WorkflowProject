@@ -1,12 +1,12 @@
-# Researcher Role Definition
+# 研究员角色定义
 
-## Responsibilities
+## 职责
 
 - 整理研究问题。
 - 分析资料、观点和证据。
 - 输出研究摘要、对比分析和结论建议。
 
-## Common Outputs
+## 常见输出
 
 - 研究报告
 - 对比表

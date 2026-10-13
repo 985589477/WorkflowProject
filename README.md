@@ -13,6 +13,7 @@ input 原始资料
 -> review 质量评审
 -> example 优秀案例
 -> knowledge 可复用知识
+-> export 独立能力包
 ```
 
 ## 核心原则
@@ -22,6 +23,79 @@ input 原始资料
 - 案例不等于普通输出。只有经过评审、具备复用价值的任务结果才能进入案例库。
 - 任何重要结构调整都需要留下决策记录，避免后续反复推翻。
 - AI 可以参与生成、评审和优化，但项目本身必须用标准和治理规则约束 AI 的产物。
+- 文档正文默认使用中文，除路径、命令、状态值和必要技术术语外，不使用不必要的英文。
+
+## 我现在该怎么用
+
+如果你是第一次使用，不要从所有目录开始看，先看：
+
+```text
+00-system/quick-start.md
+```
+
+如果要创建一个新项目，直接运行：
+
+```bash
+python3 tools/create_project.py mixed my-first-task --type real-cases
+```
+
+默认会创建到：
+
+```text
+12-projects/{角色}/{项目类型}/{项目名}/
+```
+
+如果要刷新全部导图，运行：
+
+```bash
+python3 tools/refresh_maps.py
+```
+
+如果想用可视化界面理解当前项目状态，运行：
+
+```bash
+cd 15-dashboard
+npm install
+npm run dev
+```
+
+可视化控制台的数据由 `tools/generate_dashboard_data.py` 生成。运行 `python3 tools/refresh_maps.py` 时，会同步刷新控制台数据和 XMind 导图。
+
+如果项目变多，先看项目索引：
+
+```text
+12-projects/project-index.md
+```
+
+然后只需要先关注新项目里的这几个目录：
+
+```text
+00-progress/  放执行进度和调度记录
+01-inputs/    放原始材料
+02-analysis/  放材料分析
+03-prompts/   放正式提示词
+04-outputs/   放 AI 输出
+05-review/    放质量评审
+06-lessons/   放复盘和沉淀建议
+```
+
+全局目录先不用全部理解。需要时再查对应标准、模板或工作流。
+
+执行项目时，对话中会优先说明：
+
+```text
+当前进度
+调度角色
+使用工作流
+使用模板
+下一步
+```
+
+如果你希望 AI 每一步都解释“做了什么、为什么做、你该看哪里”，使用：
+
+```text
+06-templates/meta/explainable-project-runner.md
+```
 
 ## 目录结构
 
@@ -39,6 +113,9 @@ input 原始资料
 10-knowledge-base/  从案例中提炼出的模式、反模式、最佳实践和复用片段
 11-evaluations/     提示词和输出的测试、评分、对比与评估标准
 12-projects/        具体任务项目，每个项目可拥有自己的输入、提示词、输出和复盘
+13-visual-maps/     XMind 导图和对应 Markdown 大纲
+14-exports/         从项目中导出的独立角色能力包或专项能力包
+15-dashboard/       React 可视化控制台
 99-archive/         过时、废弃或历史保留内容
 ```
 
@@ -53,13 +130,22 @@ input 原始资料
 7. 根据 `05-standards/` 和 `11-evaluations/` 完成评审。
 8. 将优秀任务沉淀为 `09-examples/` 案例包。
 9. 将可复用规律提炼到 `10-knowledge-base/`。
-10. 将过时内容移动到 `99-archive/`。
+10. 如果某个角色能力需要脱离当前项目使用，将能力导出到 `14-exports/`。
+11. 将过时内容移动到 `99-archive/`。
 
 ## 优先阅读
 
+- `00-system/quick-start.md`
+- `00-system/progress-reporting-rules.md`
+- `00-system/execution-brief-rules.md`
+- `00-system/result-report-rules.md`
+- `06-templates/meta/project-runner.md`
+- `06-templates/meta/explainable-project-runner.md`
+- `10-knowledge-base/patterns/framework-bootstrap-pattern.md`
 - `00-system/architecture.md`
 - `00-system/operating-guide.md`
 - `00-system/document-lifecycle.md`
+- `00-system/language-rules.md`
 - `02-roles/role-registry.md`
 - `01-governance/change-management.md`
 - `01-governance/quality-gates.md`
@@ -87,5 +173,8 @@ AI 结果 -> 08-outputs
 经验规律 -> 10-knowledge-base
 评估记录 -> 11-evaluations
 具体任务集合 -> 12-projects
+可视化导图 -> 13-visual-maps
+外部能力包 -> 14-exports
+可视化控制台 -> 15-dashboard
 历史保留 -> 99-archive
 ```

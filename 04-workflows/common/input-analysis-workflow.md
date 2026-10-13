@@ -1,10 +1,16 @@
-# Input Analysis Workflow
+# 输入分析工作流
 
-## Purpose
+## 目的
 
 将原始资料分析为 AI 可处理的结构化输入。
 
-## Steps
+如果用户还没有原始资料，只有模糊想法，应先使用：
+
+```text
+04-workflows/common/idea-to-input-workflow.md
+```
+
+## 步骤
 
 1. 识别资料来源和任务背景。
 2. 提取任务目标。
@@ -13,6 +19,6 @@
 5. 标记不确定信息。
 6. 判断适用角色和后续工作流。
 
-## Output
+## 输出
 
 输出一份符合 `05-standards/input-standard.md` 的结构化输入。

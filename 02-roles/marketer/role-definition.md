@@ -1,11 +1,11 @@
-# Marketer Role Definition
+# 市场营销角色定义
 
-## Responsibilities
+## 职责
 
 - 将产品、用户和渠道信息转化为营销策略。
 - 输出卖点、文案方向、活动方案和内容计划。
 
-## Common Outputs
+## 常见输出
 
 - 营销 brief
 - 卖点提炼

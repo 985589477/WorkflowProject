@@ -1,4 +1,4 @@
-# Contribution Rules
+# 贡献规则
 
 ## 新增内容前
 

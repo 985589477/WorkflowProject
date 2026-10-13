@@ -1,12 +1,12 @@
-# 0001 Project Architecture
+# 0001 项目架构决策
 
-Status: accepted
+状态: accepted
 
-## Context
+## 背景
 
 项目需要同时支持产品经理、程序员、UI 设计师等多种 AI 协作角色，并管理从原始资料到优秀案例的完整链路。
 
-## Decision
+## 决策
 
 采用分层目录架构：
 
@@ -16,7 +16,7 @@ Status: accepted
 - `12-projects` 承载具体任务。
 - `99-archive` 保留历史内容。
 
-## Consequences
+## 影响
 
 - 项目前期结构较完整，但后续扩展角色、模板、工作流和案例时不需要推倒重来。
 - 任何架构级调整必须更新本决策记录体系。

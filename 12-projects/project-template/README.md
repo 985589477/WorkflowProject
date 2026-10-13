@@ -1,31 +1,57 @@
-# Project Template
+# 项目模板
 
-Status: template
+状态: template
 
-## Goal
+## 目标
 
 说明本项目要解决的问题。
 
-## Role
+## 角色
 
 说明本项目使用的主要 AI 协作角色。
 
-## Inputs
+## 输入材料
 
 说明输入资料来源。
 
-## Workflows
+## 使用的工作流
 
 说明将使用哪些工作流。
 
-## Templates
+## 使用的模板
 
 说明将使用或生成哪些模板。
 
-## Status
+## 当前状态
 
 记录当前状态：draft、reviewed、accepted、archived。
 
-## Promotion
+## 如何启动
+
+下次继续本项目时，先阅读：
+
+```text
+README.md
+00-progress/next-actions.md
+00-progress/progress-log.md
+```
+
+然后对 AI 说：
+
+```text
+请继续推进这个项目，并先说明当前状态、推荐下一步和会使用哪些文件。
+```
+
+## 进度记录
+
+关键执行节点记录到：
+
+```text
+00-progress/progress-log.md
+00-progress/decision-log.md
+00-progress/next-actions.md
+```
+
+## 沉淀与提升
 
 项目结束时记录哪些内容提升到全局模板、案例或知识库。

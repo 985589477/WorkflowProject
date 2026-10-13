@@ -1,0 +1,69 @@
+# WorkflowProject AI 工作流文档工程框架
+
+- 1. 系统层：定义项目是什么
+  - 00-system/project-vision.md：项目愿景
+  - 00-system/architecture.md：总体架构
+  - 00-system/terminology.md：核心术语
+  - 00-system/naming-rules.md：命名规则
+  - 00-system/document-lifecycle.md：文档生命周期
+  - 00-system/operating-guide.md：操作指南
+- 2. 治理层：管控项目怎么维护
+  - 01-governance/contribution-rules.md：贡献规则
+  - 01-governance/change-management.md：变更管理
+  - 01-governance/versioning-rules.md：版本规则
+  - 01-governance/review-process.md：评审流程
+  - 01-governance/quality-gates.md：质量门禁
+  - 01-governance/decision-records/：架构决策记录
+- 3. 角色层：定义 AI 协作身份
+  - 02-roles/role-registry.md：角色注册表
+  - product-manager：产品经理
+  - developer：程序员 / 开发工程师
+  - ui-designer：UI 设计师
+  - researcher：研究员，预留
+  - marketer：市场营销，预留
+  - common：通用角色
+- 4. 生产输入：收集原始资料
+  - raw-materials：原始材料
+  - requirements：需求资料
+  - references：参考资料
+  - meeting-notes：会议纪要
+  - screenshots：截图资料
+  - external-docs：外部文档
+- 5. 工作流层：定义怎么让 AI 协作
+  - input-analysis：输入分析
+  - template-generation：模板生成
+  - prompt-generation：正式提示词生成
+  - output-review：输出评审
+  - example-extraction：案例沉淀
+  - template-iteration：模板迭代
+- 6. 标准层：定义什么是好的
+  - input-standard
+  - role-standard
+  - workflow-standard
+  - template-standard
+  - prompt-standard
+  - output-standard
+  - example-standard
+  - project-standard
+  - review-standard
+  - quality-checklists
+- 7. 模板层：沉淀可复用提示词骨架
+  - meta：template-generator、prompt-generator、output-reviewer、example-extractor、template-optimizer
+  - common
+  - product-manager
+  - developer
+  - ui-designer
+  - researcher / marketer
+- 8. 执行产物：保存本次任务结果
+  - 07-prompts：draft、active、reviewed、deprecated
+  - 08-outputs：draft、reviewed、accepted、rejected
+- 9. 资产沉淀：让项目越用越强
+  - 09-examples：优秀案例库
+  - 10-knowledge-base：模式、反模式、最佳实践、复用片段、经验复盘
+  - 11-evaluations：测试、评分、对比、评估标准
+- 10. 项目执行：承载真实任务
+  - 12-projects/project-template：项目模板
+  - product-manager、developer、ui-designer、mixed
+  - 99-archive：历史归档
+- 核心闭环
+  - 原始资料 -> AI 协作流程 -> 可复用模板 -> 正式提示词 -> AI 输出 -> 质量评审 -> 优秀案例 -> 知识沉淀 -> 反向优化

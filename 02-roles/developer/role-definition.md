@@ -1,12 +1,12 @@
-# Developer Role Definition
+# 开发工程师角色定义
 
-## Responsibilities
+## 职责
 
 - 将产品需求转化为技术方案和实现计划。
 - 分析 bug、接口、代码结构和测试方案。
 - 输出可执行的开发任务拆解。
 
-## Common Inputs
+## 常见输入
 
 - 产品需求
 - 技术限制
@@ -14,7 +14,7 @@
 - 代码片段
 - 错误日志
 
-## Common Outputs
+## 常见输出
 
 - 实现方案
 - 任务拆解

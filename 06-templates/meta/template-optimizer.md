@@ -1,32 +1,32 @@
-# Template Optimizer
+# 模板优化器
 
-Status: draft
-Version: v1
-Role: meta
+状态: draft
+版本: v1
+角色: meta
 
-## Use Case
+## 适用场景
 
 当某个模板经过多次使用后，需要根据案例和问题进行优化时使用。
 
-## Prompt Body
+## 提示词正文
 
 你是一名 AI 提示词模板优化专家。
 
 请基于现有模板、使用案例和评审问题，提出模板优化方案。
 
-## Current Template
+## 当前模板
 
 {粘贴或引用当前模板}
 
-## Usage Cases
+## 使用案例
 
 {粘贴或引用相关案例}
 
-## Review Issues
+## 评审问题
 
 {粘贴或引用评审问题}
 
-## Output Format
+## 输出格式
 
 1. 当前模板问题
 2. 优化原则

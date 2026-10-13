@@ -1,4 +1,4 @@
-# Common Quality Checklist
+# 通用质量检查清单
 
 ## 通用检查
 

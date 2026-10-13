@@ -1,4 +1,4 @@
-# Architecture
+# 项目架构
 
 ## 总体链路
 
@@ -11,6 +11,7 @@
 -> 11-evaluations
 -> 09-examples
 -> 10-knowledge-base
+-> 14-exports
 ```
 
 ## 分层说明
@@ -42,6 +43,7 @@
 - `09-examples/`：沉淀优秀案例。
 - `10-knowledge-base/`：提炼可复用知识。
 - `11-evaluations/`：沉淀测试、评分和评估方法。
+- `14-exports/`：存放可脱离当前项目独立使用的角色能力包或专项能力包。
 - `99-archive/`：保存历史和废弃内容。
 
 ## 全局目录与项目目录的关系
@@ -54,4 +56,14 @@
 12-projects/.../template.md -> 06-templates/
 12-projects/.../output.md -> 09-examples/
 12-projects/.../lesson.md -> 10-knowledge-base/
+```
+
+当某组能力已经稳定，并需要提供给某个角色或外部项目独立使用时，再导出到 `14-exports/`：
+
+```text
+04-workflows/{role}/
+06-templates/{role}/
+11-evaluations/output-scorecards/
+10-knowledge-base/
+-> 14-exports/{role}-kit/
 ```

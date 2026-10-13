@@ -1,0 +1,57 @@
+# 从材料到输出的 AI 协作操作流程
+
+- 0. 创建任务项目
+  - 复制 `12-projects/project-template/`
+  - 填写项目 README：目标、角色、输入来源、状态
+  - 确定任务类型：产品 / 开发 / UI / 跨角色
+- 1. 放入原始材料
+  - 需求、会议纪要、参考资料、截图、代码、业务背景
+  - 优先放入项目内 `01-inputs/`
+  - 长期可复用资料再提升到全局 `03-inputs/`
+- 2. 分析输入材料
+  - 使用 `04-workflows/common/input-analysis-workflow.md`
+  - 提取背景、目标、关键事实、限制条件
+  - 标记不确定信息和待确认问题
+  - 判断适用角色和后续工作流
+- 3. 选择或生成模板
+  - 已有模板：从 `06-templates/{role}/` 选择
+  - 没有模板：使用 `06-templates/meta/template-generator.md`
+  - 根据 `05-standards/template-standard.md` 检查
+- 4. 生成正式提示词
+  - 使用 `06-templates/meta/prompt-generator.md`
+  - 把结构化输入填入模板占位符
+  - 补充输出格式、质量标准、未知信息处理规则
+  - 保存到项目 `03-prompts/` 或全局 `07-prompts/`
+- 5. 执行 AI 任务
+  - 将正式提示词交给 AI
+  - 获得 AI 输出
+  - 保存到项目 `04-outputs/` 或全局 `08-outputs/draft/`
+- 6. 评审输出质量
+  - 使用 `06-templates/meta/output-reviewer.md`
+  - 对照输入材料检查准确性
+  - 对照提示词检查完整性和格式
+  - 按 `11-evaluations/evaluation-rubrics/` 评分
+  - 保存评审到项目 `05-review/`
+- 7. 处理评审结果
+  - 通过：进入 `08-outputs/accepted/`，再判断是否沉淀案例
+  - 需修改：调整输入或正式提示词，重新执行 AI
+  - 不采纳：保存到 `08-outputs/rejected/`，记录问题原因
+- 8. 沉淀优秀案例
+  - 使用 `04-workflows/common/example-extraction-workflow.md`
+  - 使用 `06-templates/meta/example-extractor.md`
+  - 整理输入材料、工作流、模板、正式提示词、输出、评审、复盘
+  - 保存到 `09-examples/{role}/`
+- 9. 提炼知识资产
+  - 成功模式 -> `10-knowledge-base/patterns/`
+  - 常见错误 -> `10-knowledge-base/anti-patterns/`
+  - 最佳实践 -> `10-knowledge-base/best-practices/`
+  - 可复用片段 -> `10-knowledge-base/reusable-blocks/`
+  - 经验复盘 -> `10-knowledge-base/lessons-learned/`
+- 10. 反向优化框架
+  - 模板问题 -> 使用模板优化器处理
+  - 流程问题 -> 更新 `04-workflows/`
+  - 标准问题 -> 更新 `05-standards/`
+  - 架构问题 -> 新增 decision-record
+  - 过时内容 -> 移入 `99-archive/`
+- 完整闭环
+  - 材料 -> 结构化输入 -> 模板 -> 正式提示词 -> AI 输出 -> 评审结果 -> 优秀案例 -> 知识沉淀 -> 模板 / 标准 / 工作流迭代
