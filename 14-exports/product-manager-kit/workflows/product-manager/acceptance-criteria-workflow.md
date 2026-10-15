@@ -40,7 +40,7 @@
 ```text
 {目标文档目录}/prd.md
 {目标文档目录}/feature-spec.md
-02-analysis/feature-list.md
+{目标文档目录}/feature-list.md
 ```
 
 ## 执行步骤
@@ -51,7 +51,7 @@
 - 明确不验收哪些内容。
 - 标记缺失信息。
 
-产出：`02-analysis/acceptance-scope.md`
+产出：`{目标文档目录}/acceptance-scope.md`
 
 ### 第 2 步：提取功能模块
 
@@ -59,13 +59,14 @@
 - 保留每个功能的来源。
 - 区分核心功能和辅助功能。
 
-产出：`02-analysis/acceptance-feature-map.md`
+产出：`{目标文档目录}/acceptance-feature-map.md`
 
 ### 第 3 步：生成正常流程验收标准
 
 - 为每个核心功能生成正常流程验收项。
 - 写明前置条件、操作步骤和预期结果。
 - 避免主观描述。
+- 对高频或关键操作补充可操作性、反馈和完成路径验收项。
 
 产出：`{目标文档目录}/acceptance-criteria.md`
 
@@ -80,6 +81,7 @@
 
 - 补充首次使用、无项目、无资产、长文本、路径缺失等情况。
 - 明确系统应如何展示或提示。
+- 补充取消、返回、重试、撤销和恢复路径。
 
 产出：`{目标文档目录}/edge-case-acceptance.md`
 

@@ -1,0 +1,6 @@
+interface:
+  display_name: "WorkflowProject 开发治理"
+  short_description: "从需求到验证治理 AI 开发"
+  default_prompt: "使用 $workflowproject-kit 先检查项目治理材料，再规划并逐条完成这项开发任务。"
+policy:
+  allow_implicit_invocation: true

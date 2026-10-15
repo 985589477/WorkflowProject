@@ -67,7 +67,7 @@
 处理动作：
 
 - 判断任务属于产品、开发、设计、研究、营销、跨角色或其他类型。
-- 判断应该创建到哪个项目角色目录。
+- 判断应该保存到哪个目标文档目录；如果在外部项目中使用，优先使用已有文档目录，没有合适目录时再创建 `docs/`。
 
 产出：
 
@@ -136,7 +136,7 @@
 产出：
 
 ```text
-12-projects/{角色}/{项目名}/01-inputs/original-requirement.md
+{目标文档目录}/original-requirement.md
 ```
 
 ### 第 6 步：进入后续流程
@@ -153,7 +153,7 @@
 产出：
 
 ```text
-12-projects/{角色}/{项目名}/02-analysis/input-analysis.md
+{目标文档目录}/input-analysis.md
 ```
 
 ## 输出结果

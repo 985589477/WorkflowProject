@@ -42,7 +42,7 @@
 - 明确当前阶段目标。
 - 标记不参与判断的事项。
 
-产出：`02-analysis/priority-goal.md`
+产出：`{目标文档目录}/priority-goal.md`
 
 ### 第 2 步：整理候选项
 
@@ -50,14 +50,14 @@
 - 保留每个候选项来源。
 - 标记信息不足项。
 
-产出：`02-analysis/priority-candidates.md`
+产出：`{目标文档目录}/priority-candidates.md`
 
 ### 第 3 步：定义判断维度
 
 - 默认维度包括用户价值、业务价值、紧急程度、实现成本、风险和依赖。
 - 如有业务特殊要求，可补充自定义维度。
 
-产出：`02-analysis/priority-dimensions.md`
+产出：`{目标文档目录}/priority-dimensions.md`
 
 ### 第 4 步：逐项判断
 
@@ -65,7 +65,7 @@
 - 说明高低判断依据。
 - 不对信息不足项强行排序。
 
-产出：`02-analysis/priority-assessment.md`
+产出：`{目标文档目录}/priority-assessment.md`
 
 ### 第 5 步：输出优先级建议
 

@@ -43,3 +43,14 @@
 - 输出位置：05-review/output-review.md、06-lessons/promotion-notes.md
 - 当前结果：产品经理工作流 v2 已提升到全局目录
 - 下一步：用真实 PRD 项目验证新版工作流
+
+## 2026-10-13：总入口体验升级
+
+- 当前阶段：产品经理总入口已升级
+- 调度角色：产品经理能力包体验架构师
+- 使用工作流：04-workflows/product-manager/product-manager-workflow.md
+- 输入位置：用户提出“可以把原来的能力进行升级”
+- 输出位置：04-workflows/product-manager/product-manager-workflow.md、14-exports/product-manager-kit/
+- 当前结果：产品经理总入口从任务分流器升级为产品生命周期编排器
+- 新增内容：产品全链路原则、执行状态格式、任务结束标准、首次接入说明、快速启动示例、Codex/Cursor 使用说明
+- 下一步：在外部项目中验证 product-manager-kit 是否能从想法推进到需求分析、PRD、验收标准和版本规划

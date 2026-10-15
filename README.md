@@ -1,8 +1,10 @@
 # WorkflowProject
 
-WorkflowProject 是一个面向 AI 协作的工作流文档工程框架。
+WorkflowProject 是一个面向 AI 协作开发的项目治理约束框架，也用于生产和管理可复用的角色能力、工作流、模板和评审资产。
 
-它的目标不是简单收集提示词，而是管理一条完整的生产链路：
+它的核心目标不是把角色提示词写得越来越细，而是让 AI 在真实项目中先理解项目、遵守项目事实、按任务列表逐条执行并留下验证证据。
+
+当需要建设或沉淀 AI 能力时，再管理下面这条资产生产链路：
 
 ```text
 input 原始资料
@@ -24,6 +26,21 @@ input 原始资料
 - 任何重要结构调整都需要留下决策记录，避免后续反复推翻。
 - AI 可以参与生成、评审和优化，但项目本身必须用标准和治理规则约束 AI 的产物。
 - 文档正文默认使用中文，除路径、命令、状态值和必要技术术语外，不使用不必要的英文。
+- 真实项目的架构、模块、设计规范和任务文档优先于通用角色能力包。
+- 角色能力按需调用，不为了形式完整而强制所有角色参与。
+- 缺少关键项目事实时，AI 应先与用户交互补齐，不应静默猜测后直接写代码。
+
+项目治理主入口：
+
+```text
+04-workflows/common/project-governance-workflow.md
+```
+
+项目治理模型：
+
+```text
+00-system/project-governance-model.md
+```
 
 ## 我现在该怎么用
 
@@ -31,6 +48,70 @@ input 原始资料
 
 ```text
 00-system/quick-start.md
+```
+
+如果你不是要建设 WorkflowProject，而是想直接使用已经导出的角色能力包，可以从这里开始：
+
+```text
+14-exports/team-orchestration-kit/START-HERE.md
+14-exports/product-manager-kit/START-HERE.md
+14-exports/developer-kit/START-HERE.md
+14-exports/ui-designer-kit/START-HERE.md
+14-exports/tester-kit/START-HERE.md
+```
+
+如果你希望把全部开发治理能力一次性带到另一个代码项目，优先使用统一安装包：
+
+```text
+14-exports/workflowproject-kit/
+```
+
+生成或刷新它：
+
+```bash
+python3 tools/export_unified_kit.py
+```
+
+复制后安装到目标项目：
+
+```bash
+python3 workflowproject-kit/scripts/install_project.py /目标代码项目
+```
+
+这个统一包本身就是一个 Codex Skill；安装脚本还会生成项目级 `AGENTS.md`、`AI-WORKFLOW-RULES.md` 和 Cursor 规则。外部项目不需要复制整个 WorkflowProject。
+
+如果你的目标是治理一个真实代码项目，而不是直接调用某个角色，请优先使用：
+
+```text
+14-exports/project-governance-kit/START-HERE.md
+```
+
+安装完整能力套件：
+
+```bash
+python3 tools/install_project_kits.py /你的代码项目路径
+```
+
+当前已经完成并导出的角色能力包：
+
+| 能力包 | 作用 | 入口 |
+| --- | --- | --- |
+| `team-orchestration-kit/` | 产品、UI、开发、测试的团队总调度、交接检查和验收 | `14-exports/team-orchestration-kit/START-HERE.md` |
+| `product-manager-kit/` | 产品想法、需求分析、PRD、验收标准、功能规划、版本规划、复盘 | `14-exports/product-manager-kit/START-HERE.md` |
+| `developer-kit/` | 项目理解、架构影响、模块边界、任务拆解、逐条实现、测试验证、评审、发布回滚 | `14-exports/developer-kit/START-HERE.md` |
+| `ui-designer-kit/` | UI brief、页面结构、信息架构、组件状态、设计交接 | `14-exports/ui-designer-kit/START-HERE.md` |
+| `tester-kit/` | 测试计划、测试用例、回归范围、缺陷复现、发布验收 | `14-exports/tester-kit/START-HERE.md` |
+
+项目治理能力包：
+
+| 能力包 | 作用 | 入口 |
+| --- | --- | --- |
+| `project-governance-kit/` | 检查真实项目的架构、模块、设计规范、任务列表和模块文档，并在缺失时引导补齐 | `14-exports/project-governance-kit/START-HERE.md` |
+
+后续新增角色能力包时，必须遵守：
+
+```text
+05-standards/role-kit-lifecycle-standard.md
 ```
 
 如果要创建一个新项目，直接运行：
@@ -59,13 +140,29 @@ npm install
 npm run dev
 ```
 
-可视化控制台的数据由 `tools/generate_dashboard_data.py` 生成。运行 `python3 tools/refresh_maps.py` 时，会同步刷新控制台数据和 XMind 导图。
+可视化控制台的数据由 `tools/generate_dashboard_data.py` 生成。运行 `python3 tools/refresh_maps.py` 时，会同步刷新项目索引、资产索引、控制台数据和 XMind 导图。
 
 如果项目变多，先看项目索引：
 
 ```text
 12-projects/project-index.md
 ```
+
+如果不是找历史项目，而是想知道当前有哪些能力、工作流、模板、评分表可以直接使用，先看可用资产索引：
+
+```text
+12-projects/asset-index.md
+```
+
+如果某个项目持续迭代很多轮，继续项目时优先读：
+
+```text
+README.md
+00-progress/memory-summary.md
+00-progress/next-actions.md
+```
+
+不要默认每次读取完整 `progress-log.md`。需要追溯原因时再读历史记录。
 
 然后只需要先关注新项目里的这几个目录：
 
@@ -121,17 +218,14 @@ npm run dev
 
 ## 标准工作方式
 
-1. 在 `12-projects/` 下创建具体任务项目。
-2. 将原始资料放入项目内输入目录，或全局 `03-inputs/`。
-3. 选择 `04-workflows/` 中的工作流。
-4. 使用 `06-templates/meta/` 让 AI 辅助生成或优化角色模板。
-5. 使用角色模板生成正式提示词，并放入 `07-prompts/` 或项目内 prompts 目录。
-6. 执行 AI 后，将结果放入 `08-outputs/` 或项目内 outputs 目录。
-7. 根据 `05-standards/` 和 `11-evaluations/` 完成评审。
-8. 将优秀任务沉淀为 `09-examples/` 案例包。
-9. 将可复用规律提炼到 `10-knowledge-base/`。
-10. 如果某个角色能力需要脱离当前项目使用，将能力导出到 `14-exports/`。
-11. 将过时内容移动到 `99-archive/`。
+1. 如果处理真实代码项目，先使用项目治理主流程检查外部项目的规则、架构、模块、设计规范和任务状态。
+2. 在 `12-projects/` 下创建 WorkflowProject 自身的具体任务项目。
+3. 将原始资料放入任务目录或全局 `03-inputs/`。
+4. 根据治理检查结果按需选择 `04-workflows/` 中的角色或专项工作流。
+5. 使用模板、执行任务并保存验证结果。
+6. 根据 `05-standards/` 和 `11-evaluations/` 完成评审。
+7. 将稳定规律沉淀到 `09-examples/`、`10-knowledge-base/` 或 `14-exports/`。
+8. 将过时内容移动到 `99-archive/`。
 
 ## 优先阅读
 
@@ -151,6 +245,8 @@ npm run dev
 - `01-governance/quality-gates.md`
 - `05-standards/role-standard.md`
 - `05-standards/workflow-standard.md`
+- `05-standards/role-kit-lifecycle-standard.md`
+- `05-standards/iteration-memory-standard.md`
 - `05-standards/template-standard.md`
 - `05-standards/prompt-standard.md`
 - `05-standards/project-standard.md`

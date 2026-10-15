@@ -11,7 +11,7 @@
 本模板用于生成：
 
 ```text
-04-outputs/feature-planning.md
+{目标文档目录}/feature-planning.md
 ```
 
 ## 输入变量

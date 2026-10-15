@@ -39,8 +39,8 @@
 推荐输入：
 
 ```text
-02-analysis/prd-user-scenarios.md
-02-analysis/feature-list.md
+{目标文档目录}/prd-user-scenarios.md
+{目标文档目录}/feature-list.md
 {目标文档目录}/prd.md
 {目标文档目录}/feature-spec.md
 ```
@@ -53,7 +53,7 @@
 - 区分主要用户、次要用户和维护者。
 - 标记不明确角色。
 
-产出：`02-analysis/user-story-roles.md`
+产出：`{目标文档目录}/user-story-roles.md`
 
 ### 第 2 步：提取用户目标
 
@@ -61,7 +61,7 @@
 - 区分用户目标和系统功能。
 - 标记目标对应的功能来源。
 
-产出：`02-analysis/user-goals.md`
+产出：`{目标文档目录}/user-goals.md`
 
 ### 第 3 步：匹配功能和价值
 
@@ -69,7 +69,7 @@
 - 为每个功能补充用户价值。
 - 排除没有明确用户价值的功能，或写入待确认。
 
-产出：`02-analysis/story-feature-map.md`
+产出：`{目标文档目录}/story-feature-map.md`
 
 ### 第 4 步：生成用户故事
 

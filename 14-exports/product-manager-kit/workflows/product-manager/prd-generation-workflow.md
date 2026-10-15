@@ -43,8 +43,8 @@ PRD 生成前至少需要：
 推荐输入：
 
 ```text
-02-analysis/requirement-analysis.md
-02-analysis/review-gap-resolution.md
+{目标文档目录}/requirement-analysis.md
+{目标文档目录}/review-gap-resolution.md
 05-review/output-review.md
 ```
 
@@ -57,7 +57,7 @@ PRD 生成前至少需要：
 产出：
 
 ```text
-02-analysis/prd-readiness.md
+{目标文档目录}/prd-readiness.md
 ```
 
 ### 第 2 步：确认产品定位和版本边界
@@ -67,7 +67,7 @@ PRD 生成前至少需要：
 产出：
 
 ```text
-02-analysis/prd-scope.md
+{目标文档目录}/prd-scope.md
 ```
 
 ### 第 3 步：整理用户角色和场景
@@ -77,7 +77,7 @@ PRD 生成前至少需要：
 产出：
 
 ```text
-02-analysis/prd-user-scenarios.md
+{目标文档目录}/prd-user-scenarios.md
 ```
 
 ### 第 4 步：生成功能清单
@@ -87,7 +87,7 @@ PRD 生成前至少需要：
 产出：
 
 ```text
-02-analysis/feature-list.md
+{目标文档目录}/feature-list.md
 ```
 
 ### 第 5 步：编写功能说明
@@ -98,6 +98,16 @@ PRD 生成前至少需要：
 
 ```text
 {目标文档目录}/feature-spec.md
+```
+
+### 第 5.5 步：补充用户任务流程和交互要求
+
+为每个核心功能明确用户入口、主要操作路径、成功条件、处理中反馈、失败恢复、取消返回和空状态。产品只描述用户行为和产品约束，不提前替 UI 决定具体颜色、字号或布局。
+
+产出：
+
+```text
+{目标文档目录}/user-task-flows.md
 ```
 
 ### 第 6 步：编写验收标准
@@ -153,7 +163,8 @@ PRD 生成前至少需要：
 
 ## 功能说明
 
-## 用户流程
+
+## 用户任务流程与交互要求
 
 ## 验收标准
 
@@ -174,6 +185,8 @@ PRD 输出必须满足：
 - 明确第一版做什么和不做什么。
 - 不把待确认问题写成确定需求。
 - 功能说明能被设计和开发理解。
+- 核心用户任务有清晰的入口、步骤、成功条件、反馈和恢复路径。
+- 不用“简单、流畅、美观”等主观词替代可观察的交互要求。
 - 验收标准能被测试或用户验证。
 - 后续版本规划不干扰第一版范围。
 

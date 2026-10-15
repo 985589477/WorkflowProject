@@ -14,17 +14,81 @@ python3 tools/generate_project_index.py
 python3 tools/refresh_maps.py
 ```
 
+## 当前工作区
+
+当前工作区由 `12-projects/current-focus.md` 维护，只保留当前主线和入口，不代表全部项目。
+
+这不是全部项目清单，只回答：现在应该先看什么、继续什么、暂时不要碰什么。
+
+## 当前主线
+
+### 1. 项目治理框架
+
+当前主线已经从“继续细化角色”调整为“治理真实代码项目”。先看：
+
+```text
+00-system/project-governance-model.md
+04-workflows/common/project-governance-workflow.md
+14-exports/project-governance-kit/START-HERE.md
+```
+
+安装到真实代码项目：
+
+```bash
+python3 tools/install_project_kits.py /你的代码项目路径 --dry-run
+python3 tools/install_project_kits.py /你的代码项目路径
+```
+
+### 2. 真实项目验证
+
+下一步应找一个真实代码项目，验证 `project-governance-kit` 是否能在写代码前完成：
+
+```text
+项目规则检查
+架构和模块检查
+设计规范检查
+任务列表生成
+逐条执行和验证
+文档同步
+```
+
+### 3. 角色能力维护
+
+产品、UI、开发、测试角色已经作为可选专业能力保留。后续只有在真实验证中出现专业缺口或 badcase 时，才回到对应角色项目优化，不再继续无目标地扩展角色细分。
+
+## 暂时不要做
+
+- 不要重新打开所有已经完成的角色能力建设项目。
+- 不要为了项目数量继续新建角色工作流。
+- 不要把每一次真实需求都创建成能力建设项目。
+- 不要删除历史项目；需要清理时先归档并保留索引。
+
+## 三个入口
+
+| 你想知道什么 | 先看哪里 |
+| --- | --- |
+| 当前应该做什么 | `12-projects/current-focus.md` |
+| 有哪些可复用能力 | `12-projects/asset-index.md` |
+| 所有历史和建设项目 | `12-projects/project-index.md` |
+
+## 当前项目选择规则
+
+- 建设或修改通用能力：使用 `capability-building`。
+- 验证一个真实需求或真实项目：使用 `real-cases`。
+- 验证不稳定想法：使用 `experiments`。
+- 只是日常使用已完成能力：直接使用导出包或全局工作流，不新建能力建设项目。
+
 ## 分组总览
 
 ### 跨角色项目
 
 - 角色目录：`12-projects/mixed/`
-- 项目数量：2
+- 项目数量：4
 
 #### 能力建设项目
 
 - 项目类型：`capability-building`
-- 项目数量：2
+- 项目数量：4
 
 ##### 能力导出工作流建设项目
 
@@ -39,14 +103,70 @@ python3 tools/refresh_maps.py
 - 启动方式：
 
 ```text
-请使用 12-projects/mixed/capability-building/capability-export-workflow 继续这个项目，并先阅读 README.md、00-progress/next-actions.md 和 00-progress/progress-log.md。
+请使用 12-projects/mixed/capability-building/capability-export-workflow 继续这个项目，并先阅读 README.md、00-progress/memory-summary.md 和 00-progress/next-actions.md。
 ```
 
 - 使用示例：
 
 ```text
 请使用 12-projects/mixed/capability-building/capability-export-workflow 继续这个能力建设项目，
-并先阅读 README.md、00-progress/next-actions.md 和 00-progress/progress-log.md。
+并先阅读 README.md、00-progress/memory-summary.md 和 00-progress/next-actions.md。
+
+我想要优化或继续建设这个能力：
+{写你的想法或修改要求}
+
+请按项目流程更新 input、analysis、prompt、output、review 和 lessons。
+```
+
+##### 跨角色团队总调度导出包建设项目
+
+- 状态：completed
+- 路径：`12-projects/mixed/capability-building/team-orchestration-kit-export-workflow`
+- 项目职责：把跨角色团队总调度能力导出为可复制到外部项目使用的独立能力包。
+- 何时使用：需要理解或继续这个项目时使用。
+- 关键产物：查看项目 README、04-outputs、05-review 和 06-lessons。
+- 目标：把跨角色团队总调度能力导出为可复制到外部项目使用的独立能力包。
+- 当前状态：已完成 `14-exports/team-orchestration-kit/` 导出包建设，并更新导出区 README。
+- 推荐下一步：推荐把 `team-orchestration-kit` 与四个角色包一起复制到外部项目验证。
+- 启动方式：
+
+```text
+请使用 12-projects/mixed/capability-building/team-orchestration-kit-export-workflow 继续这个项目，并先阅读 README.md、00-progress/memory-summary.md 和 00-progress/next-actions.md。
+```
+
+- 使用示例：
+
+```text
+请使用 12-projects/mixed/capability-building/team-orchestration-kit-export-workflow 继续这个能力建设项目，
+并先阅读 README.md、00-progress/memory-summary.md 和 00-progress/next-actions.md。
+
+我想要优化或继续建设这个能力：
+{写你的想法或修改要求}
+
+请按项目流程更新 input、analysis、prompt、output、review 和 lessons。
+```
+
+##### 跨角色团队总调度工作流建设项目
+
+- 状态：completed
+- 路径：`12-projects/mixed/capability-building/team-orchestration-workflow`
+- 项目职责：这个项目负责沉淀团队级编排规则：当用户提出需求时，判断哪些角色需要参与、谁先接管、如何交接、如何互相验收，以及出现沟通不畅时如何反馈 badcase 并回到对应角色能力项目优化。
+- 何时使用：当一个任务不只是单个角色能完成，而是需要产品、UI、开发、测试连续协作时，使用这个项目。 当你要在外部项目中直接使用团队总调度时，优先使用： 04-workflows/mixed/team-orchestration-workflow.md
+- 关键产物：`04-workflows/mixed/team-orchestration-workflow.md` `06-templates/mixed/team-orchestration-template.md` `11-evaluations/output-scorecards/team-orchestration-scorecard.md`
+- 目标：建设一个跨角色团队总调度能力，用于协调产品经理、UI 设计师、开发工程师、测试工程师按完整团队链路协作。
+- 当前状态：已完成团队总调度能力建设，并提升到全局 mixed 工作流、模板和评分表。
+- 推荐下一步：使用一个真实完整需求验证 `04-workflows/mixed/team-orchestration-workflow.md`，重点观察： 是否能正确判断当前接管角色。 是否能按产品 -> UI -> 开发 -> 测试推进。 是否能发现上游产物让下游看不懂的问题。 是否能判断开发交付是否通过产品、UI、测试验收。
+- 启动方式：
+
+```text
+请使用 12-projects/mixed/capability-building/team-orchestration-workflow 继续这个项目，并先阅读 README.md、00-progress/memory-summary.md 和 00-progress/next-actions.md。
+```
+
+- 使用示例：
+
+```text
+请使用 12-projects/mixed/capability-building/team-orchestration-workflow 继续这个能力建设项目，
+并先阅读 README.md、00-progress/memory-summary.md 和 00-progress/next-actions.md。
 
 我想要优化或继续建设这个能力：
 {写你的想法或修改要求}
@@ -67,14 +187,14 @@ python3 tools/refresh_maps.py
 - 启动方式：
 
 ```text
-请使用 12-projects/mixed/capability-building/workflowproject-framework-refresh 继续这个项目，并先阅读 README.md、00-progress/next-actions.md 和 00-progress/progress-log.md。
+请使用 12-projects/mixed/capability-building/workflowproject-framework-refresh 继续这个项目，并先阅读 README.md、00-progress/memory-summary.md 和 00-progress/next-actions.md。
 ```
 
 - 使用示例：
 
 ```text
 请使用 12-projects/mixed/capability-building/workflowproject-framework-refresh 继续这个能力建设项目，
-并先阅读 README.md、00-progress/next-actions.md 和 00-progress/progress-log.md。
+并先阅读 README.md、00-progress/memory-summary.md 和 00-progress/next-actions.md。
 
 我想要优化或继续建设这个能力：
 {写你的想法或修改要求}
@@ -105,14 +225,14 @@ python3 tools/refresh_maps.py
 - 启动方式：
 
 ```text
-请使用 12-projects/product-manager/capability-building/acceptance-criteria-workflow 继续这个项目，并先阅读 README.md、00-progress/next-actions.md 和 00-progress/progress-log.md。
+请使用 12-projects/product-manager/capability-building/acceptance-criteria-workflow 继续这个项目，并先阅读 README.md、00-progress/memory-summary.md 和 00-progress/next-actions.md。
 ```
 
 - 使用示例：
 
 ```text
 请使用 12-projects/product-manager/capability-building/acceptance-criteria-workflow 继续这个能力建设项目，
-并先阅读 README.md、00-progress/next-actions.md 和 00-progress/progress-log.md。
+并先阅读 README.md、00-progress/memory-summary.md 和 00-progress/next-actions.md。
 
 我想要优化或继续建设这个能力：
 {写你的想法或修改要求}
@@ -133,14 +253,14 @@ python3 tools/refresh_maps.py
 - 启动方式：
 
 ```text
-请使用 12-projects/product-manager/capability-building/competitor-analysis-workflow 继续这个项目，并先阅读 README.md、00-progress/next-actions.md 和 00-progress/progress-log.md。
+请使用 12-projects/product-manager/capability-building/competitor-analysis-workflow 继续这个项目，并先阅读 README.md、00-progress/memory-summary.md 和 00-progress/next-actions.md。
 ```
 
 - 使用示例：
 
 ```text
 请使用 12-projects/product-manager/capability-building/competitor-analysis-workflow 继续这个能力建设项目，
-并先阅读 README.md、00-progress/next-actions.md 和 00-progress/progress-log.md。
+并先阅读 README.md、00-progress/memory-summary.md 和 00-progress/next-actions.md。
 
 我想要优化或继续建设这个能力：
 {写你的想法或修改要求}
@@ -161,14 +281,14 @@ python3 tools/refresh_maps.py
 - 启动方式：
 
 ```text
-请使用 12-projects/product-manager/capability-building/feature-planning-workflow 继续这个项目，并先阅读 README.md、00-progress/next-actions.md 和 00-progress/progress-log.md。
+请使用 12-projects/product-manager/capability-building/feature-planning-workflow 继续这个项目，并先阅读 README.md、00-progress/memory-summary.md 和 00-progress/next-actions.md。
 ```
 
 - 使用示例：
 
 ```text
 请使用 12-projects/product-manager/capability-building/feature-planning-workflow 继续这个能力建设项目，
-并先阅读 README.md、00-progress/next-actions.md 和 00-progress/progress-log.md。
+并先阅读 README.md、00-progress/memory-summary.md 和 00-progress/next-actions.md。
 
 我想要优化或继续建设这个能力：
 {写你的想法或修改要求}
@@ -189,14 +309,14 @@ python3 tools/refresh_maps.py
 - 启动方式：
 
 ```text
-请使用 12-projects/product-manager/capability-building/prd-workflow 继续这个项目，并先阅读 README.md、00-progress/next-actions.md 和 00-progress/progress-log.md。
+请使用 12-projects/product-manager/capability-building/prd-workflow 继续这个项目，并先阅读 README.md、00-progress/memory-summary.md 和 00-progress/next-actions.md。
 ```
 
 - 使用示例：
 
 ```text
 请使用 12-projects/product-manager/capability-building/prd-workflow 继续这个能力建设项目，
-并先阅读 README.md、00-progress/next-actions.md 和 00-progress/progress-log.md。
+并先阅读 README.md、00-progress/memory-summary.md 和 00-progress/next-actions.md。
 
 我想要优化或继续建设这个能力：
 {写你的想法或修改要求}
@@ -217,14 +337,14 @@ python3 tools/refresh_maps.py
 - 启动方式：
 
 ```text
-请使用 12-projects/product-manager/capability-building/priority-decision-workflow 继续这个项目，并先阅读 README.md、00-progress/next-actions.md 和 00-progress/progress-log.md。
+请使用 12-projects/product-manager/capability-building/priority-decision-workflow 继续这个项目，并先阅读 README.md、00-progress/memory-summary.md 和 00-progress/next-actions.md。
 ```
 
 - 使用示例：
 
 ```text
 请使用 12-projects/product-manager/capability-building/priority-decision-workflow 继续这个能力建设项目，
-并先阅读 README.md、00-progress/next-actions.md 和 00-progress/progress-log.md。
+并先阅读 README.md、00-progress/memory-summary.md 和 00-progress/next-actions.md。
 
 我想要优化或继续建设这个能力：
 {写你的想法或修改要求}
@@ -245,14 +365,14 @@ python3 tools/refresh_maps.py
 - 启动方式：
 
 ```text
-请使用 12-projects/product-manager/capability-building/product-manager-capability-system 继续这个项目，并先阅读 README.md、00-progress/next-actions.md 和 00-progress/progress-log.md。
+请使用 12-projects/product-manager/capability-building/product-manager-capability-system 继续这个项目，并先阅读 README.md、00-progress/memory-summary.md 和 00-progress/next-actions.md。
 ```
 
 - 使用示例：
 
 ```text
 请使用 12-projects/product-manager/capability-building/product-manager-capability-system 继续这个能力建设项目，
-并先阅读 README.md、00-progress/next-actions.md 和 00-progress/progress-log.md。
+并先阅读 README.md、00-progress/memory-summary.md 和 00-progress/next-actions.md。
 
 我想要优化或继续建设这个能力：
 {写你的想法或修改要求}
@@ -273,14 +393,14 @@ python3 tools/refresh_maps.py
 - 启动方式：
 
 ```text
-请使用 12-projects/product-manager/capability-building/product-manager-workflow 继续这个项目，并先阅读 README.md、00-progress/next-actions.md 和 00-progress/progress-log.md。
+请使用 12-projects/product-manager/capability-building/product-manager-workflow 继续这个项目，并先阅读 README.md、00-progress/memory-summary.md 和 00-progress/next-actions.md。
 ```
 
 - 使用示例：
 
 ```text
 请使用 12-projects/product-manager/capability-building/product-manager-workflow 继续这个能力建设项目，
-并先阅读 README.md、00-progress/next-actions.md 和 00-progress/progress-log.md。
+并先阅读 README.md、00-progress/memory-summary.md 和 00-progress/next-actions.md。
 
 我想要优化或继续建设这个能力：
 {写你的想法或修改要求}
@@ -301,14 +421,14 @@ python3 tools/refresh_maps.py
 - 启动方式：
 
 ```text
-请使用 12-projects/product-manager/capability-building/product-roadmap-workflow 继续这个项目，并先阅读 README.md、00-progress/next-actions.md 和 00-progress/progress-log.md。
+请使用 12-projects/product-manager/capability-building/product-roadmap-workflow 继续这个项目，并先阅读 README.md、00-progress/memory-summary.md 和 00-progress/next-actions.md。
 ```
 
 - 使用示例：
 
 ```text
 请使用 12-projects/product-manager/capability-building/product-roadmap-workflow 继续这个能力建设项目，
-并先阅读 README.md、00-progress/next-actions.md 和 00-progress/progress-log.md。
+并先阅读 README.md、00-progress/memory-summary.md 和 00-progress/next-actions.md。
 
 我想要优化或继续建设这个能力：
 {写你的想法或修改要求}
@@ -329,14 +449,14 @@ python3 tools/refresh_maps.py
 - 启动方式：
 
 ```text
-请使用 12-projects/product-manager/capability-building/product-strategy-workflow 继续这个项目，并先阅读 README.md、00-progress/next-actions.md 和 00-progress/progress-log.md。
+请使用 12-projects/product-manager/capability-building/product-strategy-workflow 继续这个项目，并先阅读 README.md、00-progress/memory-summary.md 和 00-progress/next-actions.md。
 ```
 
 - 使用示例：
 
 ```text
 请使用 12-projects/product-manager/capability-building/product-strategy-workflow 继续这个能力建设项目，
-并先阅读 README.md、00-progress/next-actions.md 和 00-progress/progress-log.md。
+并先阅读 README.md、00-progress/memory-summary.md 和 00-progress/next-actions.md。
 
 我想要优化或继续建设这个能力：
 {写你的想法或修改要求}
@@ -357,14 +477,14 @@ python3 tools/refresh_maps.py
 - 启动方式：
 
 ```text
-请使用 12-projects/product-manager/capability-building/requirement-analysis-workflow 继续这个项目，并先阅读 README.md、00-progress/next-actions.md 和 00-progress/progress-log.md。
+请使用 12-projects/product-manager/capability-building/requirement-analysis-workflow 继续这个项目，并先阅读 README.md、00-progress/memory-summary.md 和 00-progress/next-actions.md。
 ```
 
 - 使用示例：
 
 ```text
 请使用 12-projects/product-manager/capability-building/requirement-analysis-workflow 继续这个能力建设项目，
-并先阅读 README.md、00-progress/next-actions.md 和 00-progress/progress-log.md。
+并先阅读 README.md、00-progress/memory-summary.md 和 00-progress/next-actions.md。
 
 我想要优化或继续建设这个能力：
 {写你的想法或修改要求}
@@ -385,14 +505,14 @@ python3 tools/refresh_maps.py
 - 启动方式：
 
 ```text
-请使用 12-projects/product-manager/capability-building/requirement-change-evaluation-workflow 继续这个项目，并先阅读 README.md、00-progress/next-actions.md 和 00-progress/progress-log.md。
+请使用 12-projects/product-manager/capability-building/requirement-change-evaluation-workflow 继续这个项目，并先阅读 README.md、00-progress/memory-summary.md 和 00-progress/next-actions.md。
 ```
 
 - 使用示例：
 
 ```text
 请使用 12-projects/product-manager/capability-building/requirement-change-evaluation-workflow 继续这个能力建设项目，
-并先阅读 README.md、00-progress/next-actions.md 和 00-progress/progress-log.md。
+并先阅读 README.md、00-progress/memory-summary.md 和 00-progress/next-actions.md。
 
 我想要优化或继续建设这个能力：
 {写你的想法或修改要求}
@@ -413,14 +533,14 @@ python3 tools/refresh_maps.py
 - 启动方式：
 
 ```text
-请使用 12-projects/product-manager/capability-building/requirement-pool-workflow 继续这个项目，并先阅读 README.md、00-progress/next-actions.md 和 00-progress/progress-log.md。
+请使用 12-projects/product-manager/capability-building/requirement-pool-workflow 继续这个项目，并先阅读 README.md、00-progress/memory-summary.md 和 00-progress/next-actions.md。
 ```
 
 - 使用示例：
 
 ```text
 请使用 12-projects/product-manager/capability-building/requirement-pool-workflow 继续这个能力建设项目，
-并先阅读 README.md、00-progress/next-actions.md 和 00-progress/progress-log.md。
+并先阅读 README.md、00-progress/memory-summary.md 和 00-progress/next-actions.md。
 
 我想要优化或继续建设这个能力：
 {写你的想法或修改要求}
@@ -441,14 +561,14 @@ python3 tools/refresh_maps.py
 - 启动方式：
 
 ```text
-请使用 12-projects/product-manager/capability-building/user-feedback-workflow 继续这个项目，并先阅读 README.md、00-progress/next-actions.md 和 00-progress/progress-log.md。
+请使用 12-projects/product-manager/capability-building/user-feedback-workflow 继续这个项目，并先阅读 README.md、00-progress/memory-summary.md 和 00-progress/next-actions.md。
 ```
 
 - 使用示例：
 
 ```text
 请使用 12-projects/product-manager/capability-building/user-feedback-workflow 继续这个能力建设项目，
-并先阅读 README.md、00-progress/next-actions.md 和 00-progress/progress-log.md。
+并先阅读 README.md、00-progress/memory-summary.md 和 00-progress/next-actions.md。
 
 我想要优化或继续建设这个能力：
 {写你的想法或修改要求}
@@ -469,14 +589,14 @@ python3 tools/refresh_maps.py
 - 启动方式：
 
 ```text
-请使用 12-projects/product-manager/capability-building/user-story-workflow 继续这个项目，并先阅读 README.md、00-progress/next-actions.md 和 00-progress/progress-log.md。
+请使用 12-projects/product-manager/capability-building/user-story-workflow 继续这个项目，并先阅读 README.md、00-progress/memory-summary.md 和 00-progress/next-actions.md。
 ```
 
 - 使用示例：
 
 ```text
 请使用 12-projects/product-manager/capability-building/user-story-workflow 继续这个能力建设项目，
-并先阅读 README.md、00-progress/next-actions.md 和 00-progress/progress-log.md。
+并先阅读 README.md、00-progress/memory-summary.md 和 00-progress/next-actions.md。
 
 我想要优化或继续建设这个能力：
 {写你的想法或修改要求}
@@ -497,14 +617,14 @@ python3 tools/refresh_maps.py
 - 启动方式：
 
 ```text
-请使用 12-projects/product-manager/capability-building/version-planning-workflow 继续这个项目，并先阅读 README.md、00-progress/next-actions.md 和 00-progress/progress-log.md。
+请使用 12-projects/product-manager/capability-building/version-planning-workflow 继续这个项目，并先阅读 README.md、00-progress/memory-summary.md 和 00-progress/next-actions.md。
 ```
 
 - 使用示例：
 
 ```text
 请使用 12-projects/product-manager/capability-building/version-planning-workflow 继续这个能力建设项目，
-并先阅读 README.md、00-progress/next-actions.md 和 00-progress/progress-log.md。
+并先阅读 README.md、00-progress/memory-summary.md 和 00-progress/next-actions.md。
 
 我想要优化或继续建设这个能力：
 {写你的想法或修改要求}
@@ -525,14 +645,14 @@ python3 tools/refresh_maps.py
 - 启动方式：
 
 ```text
-请使用 12-projects/product-manager/capability-building/version-retrospective-workflow 继续这个项目，并先阅读 README.md、00-progress/next-actions.md 和 00-progress/progress-log.md。
+请使用 12-projects/product-manager/capability-building/version-retrospective-workflow 继续这个项目，并先阅读 README.md、00-progress/memory-summary.md 和 00-progress/next-actions.md。
 ```
 
 - 使用示例：
 
 ```text
 请使用 12-projects/product-manager/capability-building/version-retrospective-workflow 继续这个能力建设项目，
-并先阅读 README.md、00-progress/next-actions.md 和 00-progress/progress-log.md。
+并先阅读 README.md、00-progress/memory-summary.md 和 00-progress/next-actions.md。
 
 我想要优化或继续建设这个能力：
 {写你的想法或修改要求}
@@ -558,7 +678,7 @@ python3 tools/refresh_maps.py
 - 启动方式：
 
 ```text
-请使用 12-projects/product-manager/real-cases/ai-template-tool-prd 继续这个项目，并先阅读 README.md、00-progress/next-actions.md 和 00-progress/progress-log.md。
+请使用 12-projects/product-manager/real-cases/ai-template-tool-prd 继续这个项目，并先阅读 README.md、00-progress/memory-summary.md 和 00-progress/next-actions.md。
 ```
 
 - 使用示例：
@@ -586,7 +706,7 @@ python3 tools/refresh_maps.py
 - 启动方式：
 
 ```text
-请使用 12-projects/product-manager/real-cases/ai-template-tool-requirement-analysis 继续这个项目，并先阅读 README.md、00-progress/next-actions.md 和 00-progress/progress-log.md。
+请使用 12-projects/product-manager/real-cases/ai-template-tool-requirement-analysis 继续这个项目，并先阅读 README.md、00-progress/memory-summary.md 和 00-progress/next-actions.md。
 ```
 
 - 使用示例：
@@ -599,4 +719,594 @@ python3 tools/refresh_maps.py
 
 请输出到 12-projects/product-manager/real-cases/{项目名}/，
 并把核心结果保存到对应的 02-analysis、04-outputs 或 05-review 目录。
+```
+
+### 开发工程师项目
+
+- 角色目录：`12-projects/developer/`
+- 项目数量：18
+
+#### 能力建设项目
+
+- 项目类型：`capability-building`
+- 项目数量：18
+
+##### AI 协作复盘工作流建设项目
+
+- 状态：completed
+- 路径：`12-projects/developer/capability-building/ai-collaboration-retrospective-workflow`
+- 项目职责：建设 developer-kit 的“AI 协作复盘工作流”，用于把 AI 协作中的误判、越界、漏测、文档遗漏和发布问题沉淀为后续规则。
+- 何时使用：需要理解或继续这个项目时使用。
+- 关键产物：查看项目 README、04-outputs、05-review 和 06-lessons。
+- 目标：建设 developer-kit 的“AI 协作复盘工作流”，用于把 AI 协作中的误判、越界、漏测、文档遗漏和发布问题沉淀为后续规则。
+- 当前状态：已完成第一版能力建设，并提升到全局可复用目录。
+- 推荐下一步：待填写。
+- 启动方式：
+
+```text
+请使用 12-projects/developer/capability-building/ai-collaboration-retrospective-workflow 继续这个项目，并先阅读 README.md、00-progress/memory-summary.md 和 00-progress/next-actions.md。
+```
+
+- 使用示例：
+
+```text
+请使用 12-projects/developer/capability-building/ai-collaboration-retrospective-workflow 继续这个能力建设项目，
+并先阅读 README.md、00-progress/memory-summary.md 和 00-progress/next-actions.md。
+
+我想要优化或继续建设这个能力：
+{写你的想法或修改要求}
+
+请按项目流程更新 input、analysis、prompt、output、review 和 lessons。
+```
+
+##### 架构决策记录工作流建设项目
+
+- 状态：completed
+- 路径：`12-projects/developer/capability-building/architecture-decision-record-workflow`
+- 项目职责：建设 developer-kit 的“架构决策记录工作流”，用于记录关键架构选择的背景、备选方案、取舍原因、影响范围、风险代价和复盘条件。
+- 何时使用：需要理解或继续这个项目时使用。
+- 关键产物：查看项目 README、04-outputs、05-review 和 06-lessons。
+- 目标：建设 developer-kit 的“架构决策记录工作流”，用于记录关键架构选择的背景、备选方案、取舍原因、影响范围、风险代价和复盘条件。
+- 当前状态：已完成第一版能力建设，并提升到全局可复用目录。
+- 推荐下一步：待填写。
+- 启动方式：
+
+```text
+请使用 12-projects/developer/capability-building/architecture-decision-record-workflow 继续这个项目，并先阅读 README.md、00-progress/memory-summary.md 和 00-progress/next-actions.md。
+```
+
+- 使用示例：
+
+```text
+请使用 12-projects/developer/capability-building/architecture-decision-record-workflow 继续这个能力建设项目，
+并先阅读 README.md、00-progress/memory-summary.md 和 00-progress/next-actions.md。
+
+我想要优化或继续建设这个能力：
+{写你的想法或修改要求}
+
+请按项目流程更新 input、analysis、prompt、output、review 和 lessons。
+```
+
+##### 变更风险评估工作流建设项目
+
+- 状态：completed
+- 路径：`12-projects/developer/capability-building/change-risk-assessment-workflow`
+- 项目职责：建设 developer-kit 的“变更风险评估工作流”，用于在代码修改前判断风险等级、AI 执行策略、人工确认点、验证要求和回滚要求。
+- 何时使用：需要理解或继续这个项目时使用。
+- 关键产物：查看项目 README、04-outputs、05-review 和 06-lessons。
+- 目标：建设 developer-kit 的“变更风险评估工作流”，用于在代码修改前判断风险等级、AI 执行策略、人工确认点、验证要求和回滚要求。
+- 当前状态：已完成第一版能力建设，并提升到全局可复用目录。
+- 推荐下一步：待填写。
+- 启动方式：
+
+```text
+请使用 12-projects/developer/capability-building/change-risk-assessment-workflow 继续这个项目，并先阅读 README.md、00-progress/memory-summary.md 和 00-progress/next-actions.md。
+```
+
+- 使用示例：
+
+```text
+请使用 12-projects/developer/capability-building/change-risk-assessment-workflow 继续这个能力建设项目，
+并先阅读 README.md、00-progress/memory-summary.md 和 00-progress/next-actions.md。
+
+我想要优化或继续建设这个能力：
+{写你的想法或修改要求}
+
+请按项目流程更新 input、analysis、prompt、output、review 和 lessons。
+```
+
+##### 代码评审工作流建设项目
+
+- 状态：completed
+- 路径：`12-projects/developer/capability-building/code-review-workflow`
+- 项目职责：建设 developer-kit 的“代码评审工作流”，用于在交付前检查代码、测试、文档、风险和可维护性，判断是否建议交付。
+- 何时使用：需要理解或继续这个项目时使用。
+- 关键产物：查看项目 README、04-outputs、05-review 和 06-lessons。
+- 目标：建设 developer-kit 的“代码评审工作流”，用于在交付前检查代码、测试、文档、风险和可维护性，判断是否建议交付。
+- 当前状态：已完成第一版能力建设，并提升到全局可复用目录。
+- 推荐下一步：待填写。
+- 启动方式：
+
+```text
+请使用 12-projects/developer/capability-building/code-review-workflow 继续这个项目，并先阅读 README.md、00-progress/memory-summary.md 和 00-progress/next-actions.md。
+```
+
+- 使用示例：
+
+```text
+请使用 12-projects/developer/capability-building/code-review-workflow 继续这个能力建设项目，
+并先阅读 README.md、00-progress/memory-summary.md 和 00-progress/next-actions.md。
+
+我想要优化或继续建设这个能力：
+{写你的想法或修改要求}
+
+请按项目流程更新 input、analysis、prompt、output、review 和 lessons。
+```
+
+##### 依赖与技术债治理工作流建设项目
+
+- 状态：completed
+- 路径：`12-projects/developer/capability-building/dependency-and-tech-debt-workflow`
+- 项目职责：建设 developer-kit 的“依赖与技术债治理工作流”，用于管理新增依赖、依赖调整、临时方案、技术债记录和偿还计划。
+- 何时使用：需要理解或继续这个项目时使用。
+- 关键产物：查看项目 README、04-outputs、05-review 和 06-lessons。
+- 目标：建设 developer-kit 的“依赖与技术债治理工作流”，用于管理新增依赖、依赖调整、临时方案、技术债记录和偿还计划。
+- 当前状态：已完成第一版能力建设，并提升到全局可复用目录。
+- 推荐下一步：待填写。
+- 启动方式：
+
+```text
+请使用 12-projects/developer/capability-building/dependency-and-tech-debt-workflow 继续这个项目，并先阅读 README.md、00-progress/memory-summary.md 和 00-progress/next-actions.md。
+```
+
+- 使用示例：
+
+```text
+请使用 12-projects/developer/capability-building/dependency-and-tech-debt-workflow 继续这个能力建设项目，
+并先阅读 README.md、00-progress/memory-summary.md 和 00-progress/next-actions.md。
+
+我想要优化或继续建设这个能力：
+{写你的想法或修改要求}
+
+请按项目流程更新 input、analysis、prompt、output、review 和 lessons。
+```
+
+##### 开发治理能力体系建设项目
+
+- 状态：completed
+- 路径：`12-projects/developer/capability-building/developer-governance-capability-system`
+- 项目职责：建设 developer-kit 的开发治理能力体系。
+- 何时使用：需要理解或继续这个项目时使用。
+- 关键产物：查看项目 README、04-outputs、05-review 和 06-lessons。
+- 目标：建设 developer-kit 的开发治理能力体系。
+- 当前状态：已完成第一版。
+- 推荐下一步：推荐下一步： 建设 project-bootstrap-workflow，用于新项目启动时检查并补齐 AI 协作开发规范。 建议项目路径： 12-projects/developer/capability-building/project-bootstrap-workflow/
+- 启动方式：
+
+```text
+请使用 12-projects/developer/capability-building/developer-governance-capability-system 继续这个项目，并先阅读 README.md、00-progress/memory-summary.md 和 00-progress/next-actions.md。
+```
+
+- 使用示例：
+
+```text
+请使用 12-projects/developer/capability-building/developer-governance-capability-system 继续这个能力建设项目，
+并先阅读 README.md、00-progress/memory-summary.md 和 00-progress/next-actions.md。
+
+我想要优化或继续建设这个能力：
+{写你的想法或修改要求}
+
+请按项目流程更新 input、analysis、prompt、output、review 和 lessons。
+```
+
+##### developer-kit 总入口整合与导出项目
+
+- 状态：done
+- 路径：`12-projects/developer/capability-building/developer-kit-export-workflow`
+- 项目职责：把已经完成的开发治理能力整合并导出为可在外部项目独立使用的 `developer-kit`。
+- 何时使用：需要理解或继续这个项目时使用。
+- 关键产物：查看项目 README、04-outputs、05-review 和 06-lessons。
+- 目标：把已经完成的开发治理能力整合并导出为可在外部项目独立使用的 `developer-kit`。
+- 当前状态：已完成第一版导出，输出位置：
+- 推荐下一步：在一个真实代码项目中复制 `14-exports/developer-kit/`，验证以下链路： 1. 项目理解。 2. 需求到架构影响分析。 3. 模块边界判断。 4. 小范围实现。
+- 启动方式：
+
+```text
+请使用 12-projects/developer/capability-building/developer-kit-export-workflow 继续这个项目，并先阅读 README.md、00-progress/memory-summary.md 和 00-progress/next-actions.md。
+```
+
+- 使用示例：
+
+```text
+请使用 12-projects/developer/capability-building/developer-kit-export-workflow 继续这个能力建设项目，
+并先阅读 README.md、00-progress/memory-summary.md 和 00-progress/next-actions.md。
+
+我想要优化或继续建设这个能力：
+{写你的想法或修改要求}
+
+请按项目流程更新 input、analysis、prompt、output、review 和 lessons。
+```
+
+##### 文档同步工作流建设项目
+
+- 状态：completed
+- 路径：`12-projects/developer/capability-building/documentation-sync-workflow`
+- 项目职责：建设 developer-kit 的“文档同步工作流”，用于在代码实现和验证后，判断并同步 README、AGENTS、docs、API、架构、模块和配置文档。
+- 何时使用：需要理解或继续这个项目时使用。
+- 关键产物：查看项目 README、04-outputs、05-review 和 06-lessons。
+- 目标：建设 developer-kit 的“文档同步工作流”，用于在代码实现和验证后，判断并同步 README、AGENTS、docs、API、架构、模块和配置文档。
+- 当前状态：已完成第一版能力建设，并提升到全局可复用目录。
+- 推荐下一步：待填写。
+- 启动方式：
+
+```text
+请使用 12-projects/developer/capability-building/documentation-sync-workflow 继续这个项目，并先阅读 README.md、00-progress/memory-summary.md 和 00-progress/next-actions.md。
+```
+
+- 使用示例：
+
+```text
+请使用 12-projects/developer/capability-building/documentation-sync-workflow 继续这个能力建设项目，
+并先阅读 README.md、00-progress/memory-summary.md 和 00-progress/next-actions.md。
+
+我想要优化或继续建设这个能力：
+{写你的想法或修改要求}
+
+请按项目流程更新 input、analysis、prompt、output、review 和 lessons。
+```
+
+##### 环境与配置治理工作流建设项目
+
+- 状态：completed
+- 路径：`12-projects/developer/capability-building/environment-config-governance-workflow`
+- 项目职责：建设 developer-kit 的“环境与配置治理工作流”，用于管理环境变量、启动配置、构建配置、部署配置、环境差异、验证和回滚。
+- 何时使用：需要理解或继续这个项目时使用。
+- 关键产物：查看项目 README、04-outputs、05-review 和 06-lessons。
+- 目标：建设 developer-kit 的“环境与配置治理工作流”，用于管理环境变量、启动配置、构建配置、部署配置、环境差异、验证和回滚。
+- 当前状态：已完成第一版能力建设，并提升到全局可复用目录。
+- 推荐下一步：待填写。
+- 启动方式：
+
+```text
+请使用 12-projects/developer/capability-building/environment-config-governance-workflow 继续这个项目，并先阅读 README.md、00-progress/memory-summary.md 和 00-progress/next-actions.md。
+```
+
+- 使用示例：
+
+```text
+请使用 12-projects/developer/capability-building/environment-config-governance-workflow 继续这个能力建设项目，
+并先阅读 README.md、00-progress/memory-summary.md 和 00-progress/next-actions.md。
+
+我想要优化或继续建设这个能力：
+{写你的想法或修改要求}
+
+请按项目流程更新 input、analysis、prompt、output、review 和 lessons。
+```
+
+##### 影响范围分析工作流建设项目
+
+- 状态：completed
+- 路径：`12-projects/developer/capability-building/impact-analysis-workflow`
+- 项目职责：建设 developer-kit 的“影响范围分析工作流”，用于在进入实现前拆解确定影响文件、可能影响文件、调用链、接口、数据状态、测试和文档影响。
+- 何时使用：需要理解或继续这个项目时使用。
+- 关键产物：查看项目 README、04-outputs、05-review 和 06-lessons。
+- 目标：建设 developer-kit 的“影响范围分析工作流”，用于在进入实现前拆解确定影响文件、可能影响文件、调用链、接口、数据状态、测试和文档影响。
+- 当前状态：已完成第一版能力建设，并提升到全局可复用目录。
+- 推荐下一步：待填写。
+- 启动方式：
+
+```text
+请使用 12-projects/developer/capability-building/impact-analysis-workflow 继续这个项目，并先阅读 README.md、00-progress/memory-summary.md 和 00-progress/next-actions.md。
+```
+
+- 使用示例：
+
+```text
+请使用 12-projects/developer/capability-building/impact-analysis-workflow 继续这个能力建设项目，
+并先阅读 README.md、00-progress/memory-summary.md 和 00-progress/next-actions.md。
+
+我想要优化或继续建设这个能力：
+{写你的想法或修改要求}
+
+请按项目流程更新 input、analysis、prompt、output、review 和 lessons。
+```
+
+##### 代码实现执行工作流建设项目
+
+- 状态：completed
+- 路径：`12-projects/developer/capability-building/implementation-workflow`
+- 项目职责：建设 developer-kit 的“代码实现执行工作流”，用于在影响范围和风险等级明确后，指导 AI 受控修改代码、补充测试文档并输出交付说明。
+- 何时使用：需要理解或继续这个项目时使用。
+- 关键产物：查看项目 README、04-outputs、05-review 和 06-lessons。
+- 目标：建设 developer-kit 的“代码实现执行工作流”，用于在影响范围和风险等级明确后，指导 AI 受控修改代码、补充测试文档并输出交付说明。
+- 当前状态：已完成第一版能力建设，并提升到全局可复用目录。
+- 推荐下一步：待填写。
+- 启动方式：
+
+```text
+请使用 12-projects/developer/capability-building/implementation-workflow 继续这个项目，并先阅读 README.md、00-progress/memory-summary.md 和 00-progress/next-actions.md。
+```
+
+- 使用示例：
+
+```text
+请使用 12-projects/developer/capability-building/implementation-workflow 继续这个能力建设项目，
+并先阅读 README.md、00-progress/memory-summary.md 和 00-progress/next-actions.md。
+
+我想要优化或继续建设这个能力：
+{写你的想法或修改要求}
+
+请按项目流程更新 input、analysis、prompt、output、review 和 lessons。
+```
+
+##### 最小必要变更治理工作流建设项目
+
+- 状态：completed
+- 路径：`12-projects/developer/capability-building/minimal-change-governance-workflow`
+- 项目职责：把 Ponytail 项目中的“少写代码、优先复用、最小完整变更、反过度设计”思想融合进 WorkflowProject 的开发角色能力中，形成可复用的开发治理能力。
+- 何时使用：需要理解或继续这个项目时使用。
+- 关键产物：查看项目 README、04-outputs、05-review 和 06-lessons。
+- 目标：把 Ponytail 项目中的“少写代码、优先复用、最小完整变更、反过度设计”思想融合进 WorkflowProject 的开发角色能力中，形成可复用的开发治理能力。
+- 当前状态：已完成全局资产建设，并同步到 `14-exports/developer-kit/`。
+- 推荐下一步：推荐暂停本能力建设项目，转入真实开发任务验证。
+- 启动方式：
+
+```text
+请使用 12-projects/developer/capability-building/minimal-change-governance-workflow 继续这个项目，并先阅读 README.md、00-progress/memory-summary.md 和 00-progress/next-actions.md。
+```
+
+- 使用示例：
+
+```text
+请使用 12-projects/developer/capability-building/minimal-change-governance-workflow 继续这个能力建设项目，
+并先阅读 README.md、00-progress/memory-summary.md 和 00-progress/next-actions.md。
+
+我想要优化或继续建设这个能力：
+{写你的想法或修改要求}
+
+请按项目流程更新 input、analysis、prompt、output、review 和 lessons。
+```
+
+##### 模块边界分析工作流建设项目
+
+- 状态：completed
+- 路径：`12-projects/developer/capability-building/module-boundary-analysis-workflow`
+- 项目职责：建设 developer-kit 的“模块边界分析工作流”，用于判断能力归属、模块职责、新增模块、依赖方向、数据状态归属和模块协作方式。
+- 何时使用：需要理解或继续这个项目时使用。
+- 关键产物：查看项目 README、04-outputs、05-review 和 06-lessons。
+- 目标：建设 developer-kit 的“模块边界分析工作流”，用于判断能力归属、模块职责、新增模块、依赖方向、数据状态归属和模块协作方式。
+- 当前状态：已完成第一版能力建设，并提升到全局可复用目录。
+- 推荐下一步：待填写。
+- 启动方式：
+
+```text
+请使用 12-projects/developer/capability-building/module-boundary-analysis-workflow 继续这个项目，并先阅读 README.md、00-progress/memory-summary.md 和 00-progress/next-actions.md。
+```
+
+- 使用示例：
+
+```text
+请使用 12-projects/developer/capability-building/module-boundary-analysis-workflow 继续这个能力建设项目，
+并先阅读 README.md、00-progress/memory-summary.md 和 00-progress/next-actions.md。
+
+我想要优化或继续建设这个能力：
+{写你的想法或修改要求}
+
+请按项目流程更新 input、analysis、prompt、output、review 和 lessons。
+```
+
+##### 新项目启动治理工作流建设项目
+
+- 状态：completed
+- 路径：`12-projects/developer/capability-building/project-bootstrap-workflow`
+- 项目职责：建设 developer-kit 的第一条细分工作流：新项目启动治理工作流。
+- 何时使用：需要理解或继续这个项目时使用。
+- 关键产物：查看项目 README、04-outputs、05-review 和 06-lessons。
+- 目标：建设 developer-kit 的第一条细分工作流：新项目启动治理工作流。
+- 当前状态：已完成第一版。
+- 推荐下一步：推荐下一步： 建设 project-understanding-workflow，用于已有项目接手时帮助 AI 读取上下文、理解结构和发现风险。 建议项目路径： 12-projects/developer/capability-building/project-understanding-workflow/
+- 启动方式：
+
+```text
+请使用 12-projects/developer/capability-building/project-bootstrap-workflow 继续这个项目，并先阅读 README.md、00-progress/memory-summary.md 和 00-progress/next-actions.md。
+```
+
+- 使用示例：
+
+```text
+请使用 12-projects/developer/capability-building/project-bootstrap-workflow 继续这个能力建设项目，
+并先阅读 README.md、00-progress/memory-summary.md 和 00-progress/next-actions.md。
+
+我想要优化或继续建设这个能力：
+{写你的想法或修改要求}
+
+请按项目流程更新 input、analysis、prompt、output、review 和 lessons。
+```
+
+##### 已有项目理解工作流建设项目
+
+- 状态：completed
+- 路径：`12-projects/developer/capability-building/project-understanding-workflow`
+- 项目职责：建设 developer-kit 的“已有项目理解工作流”，让 AI 在接手已有代码项目时，先输出项目理解报告，再进入后续开发。
+- 何时使用：需要理解或继续这个项目时使用。
+- 关键产物：查看项目 README、04-outputs、05-review 和 06-lessons。
+- 目标：建设 developer-kit 的“已有项目理解工作流”，让 AI 在接手已有代码项目时，先输出项目理解报告，再进入后续开发。
+- 当前状态：已完成第一版能力建设，并提升到全局可复用目录。
+- 推荐下一步：待填写。
+- 启动方式：
+
+```text
+请使用 12-projects/developer/capability-building/project-understanding-workflow 继续这个项目，并先阅读 README.md、00-progress/memory-summary.md 和 00-progress/next-actions.md。
+```
+
+- 使用示例：
+
+```text
+请使用 12-projects/developer/capability-building/project-understanding-workflow 继续这个能力建设项目，
+并先阅读 README.md、00-progress/memory-summary.md 和 00-progress/next-actions.md。
+
+我想要优化或继续建设这个能力：
+{写你的想法或修改要求}
+
+请按项目流程更新 input、analysis、prompt、output、review 和 lessons。
+```
+
+##### 发布与回滚治理工作流建设项目
+
+- 状态：completed
+- 路径：`12-projects/developer/capability-building/release-and-rollback-workflow`
+- 项目职责：建设 developer-kit 的“发布与回滚治理工作流”，用于管理发布前检查、发布步骤、回滚方案、上线后观察和发布复盘入口。
+- 何时使用：需要理解或继续这个项目时使用。
+- 关键产物：查看项目 README、04-outputs、05-review 和 06-lessons。
+- 目标：建设 developer-kit 的“发布与回滚治理工作流”，用于管理发布前检查、发布步骤、回滚方案、上线后观察和发布复盘入口。
+- 当前状态：已完成第一版能力建设，并提升到全局可复用目录。
+- 推荐下一步：待填写。
+- 启动方式：
+
+```text
+请使用 12-projects/developer/capability-building/release-and-rollback-workflow 继续这个项目，并先阅读 README.md、00-progress/memory-summary.md 和 00-progress/next-actions.md。
+```
+
+- 使用示例：
+
+```text
+请使用 12-projects/developer/capability-building/release-and-rollback-workflow 继续这个能力建设项目，
+并先阅读 README.md、00-progress/memory-summary.md 和 00-progress/next-actions.md。
+
+我想要优化或继续建设这个能力：
+{写你的想法或修改要求}
+
+请按项目流程更新 input、analysis、prompt、output、review 和 lessons。
+```
+
+##### 需求到架构影响分析工作流建设项目
+
+- 状态：completed
+- 路径：`12-projects/developer/capability-building/requirement-to-architecture-workflow`
+- 项目职责：建设 developer-kit 的“需求到架构影响分析工作流”，把产品需求转换为开发前的影响范围、模块变更、数据/API/状态影响和风险等级。
+- 何时使用：需要理解或继续这个项目时使用。
+- 关键产物：查看项目 README、04-outputs、05-review 和 06-lessons。
+- 目标：建设 developer-kit 的“需求到架构影响分析工作流”，把产品需求转换为开发前的影响范围、模块变更、数据/API/状态影响和风险等级。
+- 当前状态：已完成第一版能力建设，并提升到全局可复用目录。
+- 推荐下一步：待填写。
+- 启动方式：
+
+```text
+请使用 12-projects/developer/capability-building/requirement-to-architecture-workflow 继续这个项目，并先阅读 README.md、00-progress/memory-summary.md 和 00-progress/next-actions.md。
+```
+
+- 使用示例：
+
+```text
+请使用 12-projects/developer/capability-building/requirement-to-architecture-workflow 继续这个能力建设项目，
+并先阅读 README.md、00-progress/memory-summary.md 和 00-progress/next-actions.md。
+
+我想要优化或继续建设这个能力：
+{写你的想法或修改要求}
+
+请按项目流程更新 input、analysis、prompt、output、review 和 lessons。
+```
+
+##### 测试与验收工作流建设项目
+
+- 状态：completed
+- 路径：`12-projects/developer/capability-building/testing-verification-workflow`
+- 项目职责：建设 developer-kit 的“测试与验收工作流”，用于在代码实现后制定验证计划、运行验证、输出手动验收步骤、记录未验证内容并判断是否建议交付。
+- 何时使用：需要理解或继续这个项目时使用。
+- 关键产物：查看项目 README、04-outputs、05-review 和 06-lessons。
+- 目标：建设 developer-kit 的“测试与验收工作流”，用于在代码实现后制定验证计划、运行验证、输出手动验收步骤、记录未验证内容并判断是否建议交付。
+- 当前状态：已完成第一版能力建设，并提升到全局可复用目录。
+- 推荐下一步：待填写。
+- 启动方式：
+
+```text
+请使用 12-projects/developer/capability-building/testing-verification-workflow 继续这个项目，并先阅读 README.md、00-progress/memory-summary.md 和 00-progress/next-actions.md。
+```
+
+- 使用示例：
+
+```text
+请使用 12-projects/developer/capability-building/testing-verification-workflow 继续这个能力建设项目，
+并先阅读 README.md、00-progress/memory-summary.md 和 00-progress/next-actions.md。
+
+我想要优化或继续建设这个能力：
+{写你的想法或修改要求}
+
+请按项目流程更新 input、analysis、prompt、output、review 和 lessons。
+```
+
+### UI 设计项目
+
+- 角色目录：`12-projects/ui-designer/`
+- 项目数量：1
+
+#### 能力建设项目
+
+- 项目类型：`capability-building`
+- 项目数量：1
+
+##### UI 设计能力包启动项目
+
+- 状态：completed
+- 路径：`12-projects/ui-designer/capability-building/ui-designer-kit-bootstrap`
+- 项目职责：这个项目负责启动并细化 UI 设计能力体系，沉淀总入口、细分工作流、模板、评分表和导出包。
+- 何时使用：当你要继续完善 UI 设计角色、拆分页面评审、组件设计、设计系统检查等细分能力时，使用这个项目。 当你要执行一次具体 UI 设计任务时，优先使用： 14-exports/ui-designer-kit/START-HERE.md
+- 关键产物：`04-workflows/ui-designer/ui-designer-workflow.md` `04-workflows/ui-designer/design-specification-workflow.md` `04-workflows/ui-designer/responsive-adaptation-workflow.md` `04-workflows/ui-designer/design-input-analysis-workflow.md`
+- 目标：建设并细化 UI 设计角色能力包。
+- 当前状态：已完成设计治理能力版，并补齐设计规范确认、设计系统检查、响应式与多端适配、页面类型模式、组件库规划、可访问性与可用性检查、设计到开发实现约束能力，已同步到 `14-exports/ui-designer-kit/`。
+- 推荐下一步：使用一个真实页面设计任务验证 `14-exports/ui-designer-kit/`，重点观察是否能正确选择设计系统检查、设计规范确认、响应式适配、页面类型模式、组件库规划、信息架构、交互状态、可访问性与可用性检查、设计评审、设计交接或开发实现约束。
+- 启动方式：
+
+```text
+请使用 12-projects/ui-designer/capability-building/ui-designer-kit-bootstrap 继续这个项目，并先阅读 README.md、00-progress/memory-summary.md 和 00-progress/next-actions.md。
+```
+
+- 使用示例：
+
+```text
+请使用 12-projects/ui-designer/capability-building/ui-designer-kit-bootstrap 继续这个能力建设项目，
+并先阅读 README.md、00-progress/memory-summary.md 和 00-progress/next-actions.md。
+
+我想要优化或继续建设这个能力：
+{写你的想法或修改要求}
+
+请按项目流程更新 input、analysis、prompt、output、review 和 lessons。
+```
+
+### 测试工程师项目
+
+- 角色目录：`12-projects/tester/`
+- 项目数量：1
+
+#### 能力建设项目
+
+- 项目类型：`capability-building`
+- 项目数量：1
+
+##### 测试工程师能力包启动项目
+
+- 状态：completed
+- 路径：`12-projects/tester/capability-building/tester-kit-bootstrap`
+- 项目职责：这个项目负责启动并细化测试角色能力体系，沉淀总入口、细分工作流、模板、评分表和导出包。
+- 何时使用：当你要继续完善测试角色、拆分缺陷复现、回归测试、发布验收等细分能力时，使用这个项目。 当你要执行一次具体测试任务时，优先使用： 14-exports/tester-kit/START-HERE.md
+- 关键产物：`04-workflows/tester/tester-workflow.md` `04-workflows/tester/test-scope-analysis-workflow.md` `04-workflows/tester/test-case-design-workflow.md` `04-workflows/tester/regression-test-workflow.md`
+- 目标：建设并细化测试工程师角色能力包。
+- 当前状态：已完成测试治理能力版，并补齐验收标准检查、测试策略规划、测试数据与环境准备、接口与集成测试、兼容性测试、非功能风险测试、探索式测试、自动化测试规划、测试执行报告能力，已同步到 `14-exports/tester-kit/`。
+- 推荐下一步：使用一个真实 PRD、验收标准或开发变更验证 `14-exports/tester-kit/`，重点观察是否能正确选择验收标准检查、测试策略规划、测试范围分析、测试数据与环境准备、测试用例设计、接口与集成测试、兼容性测试、非功能风险测试、回归测试、探索式测试、自动化测试规划、缺陷复现、测试执行报告或发布验收。
+- 启动方式：
+
+```text
+请使用 12-projects/tester/capability-building/tester-kit-bootstrap 继续这个项目，并先阅读 README.md、00-progress/memory-summary.md 和 00-progress/next-actions.md。
+```
+
+- 使用示例：
+
+```text
+请使用 12-projects/tester/capability-building/tester-kit-bootstrap 继续这个能力建设项目，
+并先阅读 README.md、00-progress/memory-summary.md 和 00-progress/next-actions.md。
+
+我想要优化或继续建设这个能力：
+{写你的想法或修改要求}
+
+请按项目流程更新 input、analysis、prompt、output、review 和 lessons。
 ```

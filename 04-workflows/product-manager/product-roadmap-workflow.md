@@ -43,7 +43,7 @@
 - 明确路线图面向谁使用。
 - 标记不进入本次路线图的范围。
 
-产出：`02-analysis/roadmap-goal.md`
+产出：`{目标文档目录}/roadmap-goal.md`
 
 ### 第 2 步：整理输入和候选事项
 
@@ -52,7 +52,7 @@
 - 保留来源和判断依据。
 - 标记信息不足项。
 
-产出：`02-analysis/roadmap-candidates.md`
+产出：`{目标文档目录}/roadmap-candidates.md`
 
 ### 第 3 步：确定阶段主题
 
@@ -60,7 +60,7 @@
 - 为每个阶段设定主题和阶段目标。
 - 避免只按功能堆叠阶段。
 
-产出：`02-analysis/roadmap-themes.md`
+产出：`{目标文档目录}/roadmap-themes.md`
 
 ### 第 4 步：分配关键事项
 
@@ -68,7 +68,7 @@
 - 标记暂不进入路线图的事项。
 - 说明每个阶段包含和不包含内容。
 
-产出：`02-analysis/roadmap-scope.md`
+产出：`{目标文档目录}/roadmap-scope.md`
 
 ### 第 5 步：识别依赖和风险
 
@@ -76,13 +76,13 @@
 - 标记资源、技术、业务、市场和组织风险。
 - 保留关键假设和待确认问题。
 
-产出：`02-analysis/roadmap-risks.md`
+产出：`{目标文档目录}/roadmap-risks.md`
 
 ### 第 6 步：输出产品路线图
 
 - 整合目标、时间范围、阶段主题、关键事项、依赖、风险和后续动作。
 
-产出：`04-outputs/product-roadmap.md`
+产出：`{目标文档目录}/product-roadmap.md`
 
 ### 第 7 步：评审产品路线图
 

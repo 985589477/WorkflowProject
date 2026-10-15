@@ -32,8 +32,8 @@
 
 ```text
 README.md
+00-progress/memory-summary.md
 00-progress/next-actions.md
-00-progress/progress-log.md
 ```
 
 然后对 AI 说：
@@ -47,10 +47,15 @@ README.md
 关键执行节点记录到：
 
 ```text
+00-progress/memory-summary.md
 00-progress/progress-log.md
 00-progress/decision-log.md
 00-progress/next-actions.md
 ```
+
+`memory-summary.md` 记录当前项目状态摘要，用于降低长期迭代项目的历史读取成本。
+
+`progress-log.md` 记录完整执行流水，需要追溯时再读。
 
 ## 沉淀与提升
 

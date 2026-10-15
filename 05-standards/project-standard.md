@@ -23,9 +23,9 @@ project-name/
 ├── README.md
 ├── 00-progress/
 ├── 01-inputs/
-├── 02-analysis/
+├── {目标文档目录}/
 ├── 03-prompts/
-├── 04-outputs/
+├── {目标文档目录}/
 ├── 05-review/
 └── 06-lessons/
 ```

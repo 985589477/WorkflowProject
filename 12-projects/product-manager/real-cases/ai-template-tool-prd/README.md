@@ -65,8 +65,8 @@
 
 ```text
 README.md
+00-progress/memory-summary.md
 00-progress/next-actions.md
-00-progress/progress-log.md
 ```
 
 然后对 AI 说：

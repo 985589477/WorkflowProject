@@ -43,7 +43,7 @@
 - 明确判断目的，是决定是否推进、决定阶段重点，还是进入路线图规划。
 - 标记不属于本次判断范围的内容。
 
-产出：`02-analysis/strategy-object.md`
+产出：`{目标文档目录}/strategy-object.md`
 
 ### 第 2 步：整理输入信号
 
@@ -52,7 +52,7 @@
 - 整理竞品、市场和外部变化。
 - 标记证据强弱和信息缺口。
 
-产出：`02-analysis/strategy-signals.md`
+产出：`{目标文档目录}/strategy-signals.md`
 
 ### 第 3 步：判断用户与场景
 
@@ -61,7 +61,7 @@
 - 判断问题频率、痛感和重要程度。
 - 判断该场景是否和当前产品定位匹配。
 
-产出：`02-analysis/strategy-user-scenario.md`
+产出：`{目标文档目录}/strategy-user-scenario.md`
 
 ### 第 4 步：判断价值与约束
 
@@ -70,7 +70,7 @@
 - 判断当前资源、技术、时间和组织约束。
 - 判断机会窗口和不做的代价。
 
-产出：`02-analysis/strategy-value-constraints.md`
+产出：`{目标文档目录}/strategy-value-constraints.md`
 
 ### 第 5 步：形成策略结论
 

@@ -11,7 +11,7 @@
 本模板用于生成：
 
 ```text
-04-outputs/priority-decision.md
+{目标文档目录}/priority-decision.md
 ```
 
 ## 输入变量

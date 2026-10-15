@@ -46,7 +46,7 @@
 - 明确能力包使用者。
 - 明确能力包边界。
 
-产出：`02-analysis/export-scope.md`
+产出：`{目标文档目录}/export-scope.md`
 
 ### 第 2 步：收集候选资产
 
@@ -62,7 +62,7 @@
 11-evaluations/
 ```
 
-产出：`02-analysis/export-assets.md`
+产出：`{目标文档目录}/export-assets.md`
 
 ### 第 3 步：判断依赖关系
 
@@ -71,7 +71,7 @@
 - 判断哪些文件不应导出。
 - 标记缺失资产。
 
-产出：`02-analysis/export-dependencies.md`
+产出：`{目标文档目录}/export-dependencies.md`
 
 ### 第 4 步：设计导出包结构
 
@@ -89,7 +89,7 @@
 └── manifest.md
 ```
 
-产出：`02-analysis/export-package-design.md`
+产出：`{目标文档目录}/export-package-design.md`
 
 ### 第 5 步：生成导出包
 
@@ -188,6 +188,6 @@
 导出包不能把 WorkflowProject 内部目录习惯带到外部项目。尤其不要在外部项目中默认创建：
 
 ```text
-04-outputs/
+{目标文档目录}/
 12-projects/
 ```

@@ -6,6 +6,14 @@
 
 导出时间：2026-10-13
 
+product-manager-kit 的总入口不是简单分流器。它会把产品任务放进完整生命周期里判断：
+
+```text
+想法标准化 -> 需求分析 -> PRD -> 验收标准 -> 功能规划 -> 优先级 -> 版本规划 -> 路线图或需求池 -> 变更评估或复盘
+```
+
+小任务可以只执行部分阶段，但必须说明跳过哪些阶段以及为什么。
+
 ## 最快使用
 
 在新项目或新 AI 对话里，直接复制：
@@ -18,6 +26,20 @@
 
 ```text
 请使用 product-manager-kit 处理我的产品想法：{写下你的想法}
+```
+
+## 首次接入
+
+如果是第一次把 product-manager-kit 放入一个新项目，先看：
+
+```text
+INSTALL.md
+```
+
+如果想看一轮真实启动示例，先看：
+
+```text
+examples/quick-start-example.md
 ```
 
 ## 适用对象
@@ -78,15 +100,37 @@ workflows/product-manager/product-manager-workflow.md
 
 不要在外部项目中默认创建或使用 WorkflowProject 内部目录，例如 `04-outputs/` 或 `12-projects/`。
 
+## 长期迭代记忆管理
+
+如果 product-manager-kit 在同一个外部项目中持续使用，建议维护项目记忆摘要，避免每次让 AI 读取大量历史产品文档。
+
+优先使用项目已有的记忆或规则文件，例如 `AGENTS.md`、`AI-WORKFLOW-RULES.md`、`docs/project-memory.md` 或 `docs/ai-context.md`。
+
+如果没有合适文件，并且用户希望保存长期上下文，则在已有文档目录中创建：
+
+```text
+docs/ai-memory-summary.md
+```
+
+整理长期历史时使用：
+
+```text
+workflows/common/iteration-memory-management-workflow.md
+templates/common/iteration-memory-summary-template.md
+```
+
 ## 目录说明
 
 ```text
 workflows/      产品经理工作流和必要通用工作流
-templates/      产品经理模板和必要 meta 模板
+templates/      产品经理模板、必要 meta 模板和通用记忆模板
 scorecards/     输出评分表
 knowledge/      产品经理能力体系说明
 roles/          产品经理角色定义
 examples/       示例说明
+integrations/   Codex 和 Cursor 使用说明
+INSTALL.md      首次接入说明
+SKILL.md        Codex skill 草稿
 manifest.md     来源清单和维护说明
 usage-guide.md  使用指南
 ```
@@ -98,6 +142,20 @@ usage-guide.md  使用指南
 3. `workflows/product-manager/product-manager-workflow.md`
 4. `knowledge/product-manager-capability-system.md`
 5. 具体任务对应的 workflow、template 和 scorecard。
+
+## 工具集成
+
+Codex 使用说明：
+
+```text
+integrations/codex-usage.md
+```
+
+Cursor 使用说明：
+
+```text
+integrations/cursor-usage.md
+```
 
 ## 常用启动话术
 

@@ -187,7 +187,7 @@ AI-WORKFLOW-RULES.md
 不要在外部项目中默认创建或使用 WorkflowProject 内部目录，例如：
 
 ```text
-04-outputs/
+{目标文档目录}/
 12-projects/
 ```
 

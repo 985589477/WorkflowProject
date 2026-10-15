@@ -44,7 +44,7 @@
 - 明确复盘目标和参与视角。
 - 明确本次复盘不覆盖的内容。
 
-产出：`02-analysis/retrospective-scope.md`
+产出：`{目标文档目录}/retrospective-scope.md`
 
 ### 第 2 步：还原原计划
 
@@ -53,7 +53,7 @@
 - 整理原时间节点、依赖和风险。
 - 保留原始来源。
 
-产出：`02-analysis/original-plan.md`
+产出：`{目标文档目录}/original-plan.md`
 
 ### 第 3 步：整理实际结果
 
@@ -61,7 +61,7 @@
 - 整理未完成、延期、取消或迁移事项。
 - 整理上线结果、用户反馈和数据表现。
 
-产出：`02-analysis/actual-result.md`
+产出：`{目标文档目录}/actual-result.md`
 
 ### 第 4 步：分析差异和原因
 
@@ -70,7 +70,7 @@
 - 分析质量问题、协作问题、资源问题和外部依赖。
 - 区分事实、推断和待确认内容。
 
-产出：`02-analysis/retrospective-causes.md`
+产出：`{目标文档目录}/retrospective-causes.md`
 
 ### 第 5 步：沉淀经验和后续动作
 

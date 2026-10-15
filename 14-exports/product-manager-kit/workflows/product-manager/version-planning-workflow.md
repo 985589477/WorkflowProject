@@ -42,7 +42,7 @@
 - 明确首版需要交付的最小价值。
 - 标记不进入本次规划的内容。
 
-产出：`02-analysis/version-planning-goal.md`
+产出：`{目标文档目录}/version-planning-goal.md`
 
 ### 第 2 步：整理功能和优先级
 
@@ -50,7 +50,7 @@
 - 标记 P0、P1、P2 和暂不做。
 - 保留功能来源。
 
-产出：`02-analysis/version-feature-input.md`
+产出：`{目标文档目录}/version-feature-input.md`
 
 ### 第 3 步：划分版本阶段
 
@@ -58,7 +58,7 @@
 - 为每个版本说明目标。
 - 避免把所有功能塞进 v1。
 
-产出：`02-analysis/version-scope.md`
+产出：`{目标文档目录}/version-scope.md`
 
 ### 第 4 步：识别依赖和风险
 
@@ -66,7 +66,7 @@
 - 标记资源、时间、技术和业务风险。
 - 对不确定内容写入待确认问题。
 
-产出：`02-analysis/version-risks.md`
+产出：`{目标文档目录}/version-risks.md`
 
 ### 第 5 步：输出版本规划
 

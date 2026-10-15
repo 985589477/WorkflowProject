@@ -40,10 +40,10 @@
 推荐输入：
 
 ```text
-04-outputs/prd.md
-02-analysis/feature-list.md
-02-analysis/prd-scope.md
-04-outputs/feature-spec.md
+{目标文档目录}/prd.md
+{目标文档目录}/feature-list.md
+{目标文档目录}/prd-scope.md
+{目标文档目录}/feature-spec.md
 ```
 
 ## 执行步骤
@@ -54,7 +54,7 @@
 - 明确产品要优先解决的问题。
 - 标记不属于当前版本的目标。
 
-产出：`02-analysis/version-goal.md`
+产出：`{目标文档目录}/version-goal.md`
 
 ### 第 2 步：提取功能候选池
 
@@ -62,7 +62,7 @@
 - 保留来源和对应用户场景。
 - 合并重复功能。
 
-产出：`02-analysis/feature-candidate-pool.md`
+产出：`{目标文档目录}/feature-candidate-pool.md`
 
 ### 第 3 步：划分功能模块
 
@@ -70,7 +70,7 @@
 - 识别核心模块、辅助模块和后续模块。
 - 标记模块之间的依赖。
 
-产出：`02-analysis/feature-modules.md`
+产出：`{目标文档目录}/feature-modules.md`
 
 ### 第 4 步：判断功能优先级
 
@@ -78,14 +78,14 @@
 - 区分 P0、P1、P2 和暂不做。
 - 对不确定优先级写入待确认。
 
-产出：`02-analysis/feature-priority.md`
+产出：`{目标文档目录}/feature-priority.md`
 
 ### 第 5 步：输出功能规划
 
 - 整合版本目标、功能模块、优先级、依赖和风险。
 - 明确当前版本包含与不包含的功能。
 
-产出：`04-outputs/feature-planning.md`
+产出：`{目标文档目录}/feature-planning.md`
 
 ### 第 6 步：评审功能规划
 

@@ -11,7 +11,7 @@
 本模板用于生成：
 
 ```text
-04-outputs/acceptance-criteria.md
+{目标文档目录}/acceptance-criteria.md
 ```
 
 ## 输入变量

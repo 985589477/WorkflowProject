@@ -11,7 +11,7 @@
 本模板用于生成：
 
 ```text
-04-outputs/user-feedback-analysis.md
+{目标文档目录}/user-feedback-analysis.md
 ```
 
 ## 输入变量

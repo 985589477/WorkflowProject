@@ -80,7 +80,7 @@
 产出：
 
 ```text
-02-analysis/input-readiness.md
+{目标文档目录}/input-readiness.md
 ```
 
 ### 第 2 步：提取需求背景
@@ -100,7 +100,7 @@
 产出：
 
 ```text
-02-analysis/requirement-background.md
+{目标文档目录}/requirement-background.md
 ```
 
 ### 第 3 步：识别核心问题
@@ -121,7 +121,7 @@
 产出：
 
 ```text
-02-analysis/problem-definition.md
+{目标文档目录}/problem-definition.md
 ```
 
 ### 第 4 步：明确目标用户和场景
@@ -141,7 +141,7 @@
 产出：
 
 ```text
-02-analysis/user-scenarios.md
+{目标文档目录}/user-scenarios.md
 ```
 
 ### 第 5 步：定义目标和成功标准
@@ -162,7 +162,7 @@
 产出：
 
 ```text
-02-analysis/product-goals.md
+{目标文档目录}/product-goals.md
 ```
 
 ### 第 6 步：划定需求边界
@@ -183,7 +183,7 @@
 产出：
 
 ```text
-02-analysis/requirement-scope.md
+{目标文档目录}/requirement-scope.md
 ```
 
 ### 第 7 步：整理事实、推断和待确认
@@ -202,7 +202,7 @@
 产出：
 
 ```text
-02-analysis/facts-assumptions-questions.md
+{目标文档目录}/facts-assumptions-questions.md
 ```
 
 ### 第 8 步：输出需求分析结论
@@ -225,7 +225,7 @@
 产出：
 
 ```text
-02-analysis/requirement-analysis.md
+{目标文档目录}/requirement-analysis.md
 ```
 
 ## 输出结果
@@ -233,20 +233,20 @@
 一次完整需求分析项目建议包含：
 
 ```text
-02-analysis/input-readiness.md
-02-analysis/requirement-background.md
-02-analysis/problem-definition.md
-02-analysis/user-scenarios.md
-02-analysis/product-goals.md
-02-analysis/requirement-scope.md
-02-analysis/facts-assumptions-questions.md
-02-analysis/requirement-analysis.md
+{目标文档目录}/input-readiness.md
+{目标文档目录}/requirement-background.md
+{目标文档目录}/problem-definition.md
+{目标文档目录}/user-scenarios.md
+{目标文档目录}/product-goals.md
+{目标文档目录}/requirement-scope.md
+{目标文档目录}/facts-assumptions-questions.md
+{目标文档目录}/requirement-analysis.md
 ```
 
 如果项目较小，也可以合并为：
 
 ```text
-02-analysis/requirement-analysis.md
+{目标文档目录}/requirement-analysis.md
 ```
 
 推荐最终需求分析文档包含：

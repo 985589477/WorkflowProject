@@ -4,12 +4,14 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 PROJECTS_DIR = ROOT / "12-projects"
 OUTPUT = PROJECTS_DIR / "project-index.md"
+CURRENT_FOCUS = PROJECTS_DIR / "current-focus.md"
 
 ROLE_LABELS = {
     "mixed": "跨角色项目",
     "product-manager": "产品经理项目",
     "developer": "开发工程师项目",
     "ui-designer": "UI 设计项目",
+    "tester": "测试工程师项目",
     "researcher": "研究项目",
     "marketer": "市场营销项目",
 }
@@ -19,6 +21,7 @@ ROLE_ORDER = [
     "product-manager",
     "developer",
     "ui-designer",
+    "tester",
     "researcher",
     "marketer",
 ]
@@ -131,7 +134,7 @@ def usage_example(item):
         return "\n".join(
             [
                 f"请使用 {path} 继续这个能力建设项目，",
-                "并先阅读 README.md、00-progress/next-actions.md 和 00-progress/progress-log.md。",
+                "并先阅读 README.md、00-progress/memory-summary.md 和 00-progress/next-actions.md。",
                 "",
                 "我想要优化或继续建设这个能力：",
                 "{写你的想法或修改要求}",
@@ -168,7 +171,7 @@ def usage_example(item):
     return "\n".join(
         [
             f"请使用 {path} 继续这个项目，",
-            "并先阅读 README.md、00-progress/next-actions.md 和 00-progress/progress-log.md。",
+            "并先阅读 README.md、00-progress/memory-summary.md 和 00-progress/next-actions.md。",
         ]
     )
 
@@ -203,7 +206,7 @@ def project_items():
                 "goal": goal,
                 "current": first_content_line(content, "当前状态"),
                 "next": next_action(project_dir),
-                "start": f"请使用 {rel(project_dir)} 继续这个项目，并先阅读 README.md、00-progress/next-actions.md 和 00-progress/progress-log.md。",
+                "start": f"请使用 {rel(project_dir)} 继续这个项目，并先阅读 README.md、00-progress/memory-summary.md 和 00-progress/next-actions.md。",
             }
         )
         items[-1]["usage_example"] = usage_example(items[-1])
@@ -247,6 +250,37 @@ def write_index(items):
         "## 分组总览",
         "",
     ]
+
+    current_focus = read_text(CURRENT_FOCUS).strip()
+    if current_focus.startswith("# "):
+        current_focus = current_focus.split("\n", 1)[1].strip()
+    if current_focus:
+        lines = [
+            "# 项目索引",
+            "",
+            "本文件由 `tools/generate_project_index.py` 自动生成，用来解决项目变多后不知道每个项目是干什么、从哪里继续的问题。",
+            "",
+            "刷新方式：",
+            "",
+            "```bash",
+            "python3 tools/generate_project_index.py",
+            "```",
+            "",
+            "如果要同时刷新可视化控制台和 XMind，运行：",
+            "",
+            "```bash",
+            "python3 tools/refresh_maps.py",
+            "```",
+            "",
+            "## 当前工作区",
+            "",
+            "当前工作区由 `12-projects/current-focus.md` 维护，只保留当前主线和入口，不代表全部项目。",
+            "",
+            current_focus,
+            "",
+            "## 分组总览",
+            "",
+        ]
 
     if not items:
         lines.append("暂无项目。")

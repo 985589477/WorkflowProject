@@ -49,7 +49,7 @@
 - 合并重复反馈。
 - 标记反馈来源。
 
-产出：`02-analysis/raw-feedback-summary.md`
+产出：`{目标文档目录}/raw-feedback-summary.md`
 
 ### 第 2 步：反馈分类
 
@@ -57,7 +57,7 @@
 - 标记功能问题、理解问题、效率问题、体验问题和新需求建议。
 - 标记无法分类的反馈。
 
-产出：`02-analysis/feedback-categories.md`
+产出：`{目标文档目录}/feedback-categories.md`
 
 ### 第 3 步：提炼用户问题
 
@@ -65,7 +65,7 @@
 - 区分表层表达和底层问题。
 - 不把用户建议直接当需求。
 
-产出：`02-analysis/user-problems.md`
+产出：`{目标文档目录}/user-problems.md`
 
 ### 第 4 步：提炼痛点和影响
 
@@ -73,7 +73,7 @@
 - 标记影响范围、频次和情绪强度。
 - 提取核心痛点。
 
-产出：`02-analysis/pain-points.md`
+产出：`{目标文档目录}/pain-points.md`
 
 ### 第 5 步：形成需求机会
 
@@ -81,14 +81,14 @@
 - 标记机会来源和不确定性。
 - 判断是否值得进入需求分析。
 
-产出：`04-outputs/opportunity-list.md`
+产出：`{目标文档目录}/opportunity-list.md`
 
 ### 第 6 步：整理优先级线索
 
 - 根据频次、强度、影响范围、战略相关性给出优先级线索。
 - 不直接替代正式优先级判断。
 
-产出：`04-outputs/priority-signals.md`
+产出：`{目标文档目录}/priority-signals.md`
 
 ### 第 7 步：评审反馈整理结果
 

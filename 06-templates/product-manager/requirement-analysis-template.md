@@ -11,7 +11,7 @@
 本模板用于生成：
 
 ```text
-02-analysis/requirement-analysis.md
+{目标文档目录}/requirement-analysis.md
 ```
 
 ## 输入变量

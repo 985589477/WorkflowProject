@@ -11,7 +11,7 @@
 本模板用于生成：
 
 ```text
-04-outputs/product-strategy.md
+{目标文档目录}/product-strategy.md
 ```
 
 ## 输入变量

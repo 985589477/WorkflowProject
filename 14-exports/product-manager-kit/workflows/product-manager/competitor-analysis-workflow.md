@@ -50,7 +50,7 @@
 - 明确分析范围和对比维度。
 - 标记不分析内容。
 
-产出：`02-analysis/competitor-analysis-goal.md`
+产出：`{目标文档目录}/competitor-analysis-goal.md`
 
 ### 第 2 步：整理竞品事实
 
@@ -58,7 +58,7 @@
 - 标记资料来源。
 - 不把推断写成事实。
 
-产出：`02-analysis/competitor-facts.md`
+产出：`{目标文档目录}/competitor-facts.md`
 
 ### 第 3 步：拆解功能结构
 
@@ -67,7 +67,7 @@
 - 标记功能入口和关键动作。
 - 不只按页面按钮罗列，要抽象成产品能力模块。
 
-产出：`02-analysis/competitor-feature-map.md`
+产出：`{目标文档目录}/competitor-feature-map.md`
 
 ### 第 4 步：建立总体能力链路
 
@@ -75,7 +75,7 @@
 - 标记每个阶段承接的用户动作和产品能力。
 - 如果竞品是平台型产品，要体现内容、工具、生态、商业化之间的关系。
 
-产出：`02-analysis/competitor-capability-chain.md`
+产出：`{目标文档目录}/competitor-capability-chain.md`
 
 ### 第 5 步：提炼产品能力层级
 
@@ -83,7 +83,7 @@
 - 说明每一层解决的产品问题。
 - 标记哪些能力是基础能力，哪些能力是差异化能力。
 
-产出：`02-analysis/product-capability-layers.md`
+产出：`{目标文档目录}/product-capability-layers.md`
 
 ### 第 6 步：按用户类型理解能力价值
 
@@ -91,14 +91,14 @@
 - 说明每类用户最依赖哪些功能模块。
 - 识别核心用户、增长用户和商业化用户的差异。
 
-产出：`02-analysis/user-type-value-map.md`
+产出：`{目标文档目录}/user-type-value-map.md`
 
 ### 第 7 步：分析差异点
 
 - 对比竞品之间的功能、体验、定位和策略差异。
 - 标记我方可能的差异空间。
 
-产出：`02-analysis/difference-analysis.md`
+产出：`{目标文档目录}/difference-analysis.md`
 
 ### 第 8 步：提炼可借鉴点
 

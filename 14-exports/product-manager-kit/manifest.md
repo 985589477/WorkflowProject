@@ -1,6 +1,6 @@
 # 来源清单
 
-导出时间：2026-10-13
+导出时间：2026-10-15
 
 ## 时间管理规则
 
@@ -40,6 +40,7 @@ WorkflowProject
 | `workflows/common/idea-to-input-workflow.md` | `04-workflows/common/idea-to-input-workflow.md` |
 | `workflows/common/input-analysis-workflow.md` | `04-workflows/common/input-analysis-workflow.md` |
 | `workflows/common/output-review-workflow.md` | `04-workflows/common/output-review-workflow.md` |
+| `workflows/common/iteration-memory-management-workflow.md` | `04-workflows/common/iteration-memory-management-workflow.md` |
 
 ### 模板
 
@@ -48,6 +49,7 @@ WorkflowProject
 | `templates/product-manager/` | `06-templates/product-manager/` |
 | `templates/meta/idea-to-input-generator.md` | `06-templates/meta/idea-to-input-generator.md` |
 | `templates/meta/output-reviewer.md` | `06-templates/meta/output-reviewer.md` |
+| `templates/common/iteration-memory-summary-template.md` | `06-templates/common/iteration-memory-summary-template.md` |
 
 ### 评分表
 
@@ -60,6 +62,16 @@ WorkflowProject
 | 导出文件 | 来源 |
 | --- | --- |
 | `knowledge/product-manager-capability-system.md` | `10-knowledge-base/patterns/product-manager-capability-system.md` |
+
+### 使用体验层
+
+| 导出文件 | 作用 |
+| --- | --- |
+| `INSTALL.md` | 外部项目首次接入说明 |
+| `examples/quick-start-example.md` | 快速启动示例 |
+| `integrations/codex-usage.md` | Codex 使用说明 |
+| `integrations/cursor-usage.md` | Cursor 使用说明 |
+| `SKILL.md` | Codex skill 草稿 |
 
 ## 未导出内容
 
@@ -86,5 +98,7 @@ WorkflowProject
 - `11-evaluations/output-scorecards/` 中产品经理评分表
 - `10-knowledge-base/patterns/product-manager-capability-system.md`
 - `02-roles/product-manager/role-definition.md`
+- `04-workflows/common/iteration-memory-management-workflow.md`
+- `06-templates/common/iteration-memory-summary-template.md`
 
 重新导出后更新本文件的导出时间和来源清单。

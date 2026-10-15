@@ -45,7 +45,7 @@
 - 明确本次需求池服务于哪个产品、版本或阶段。
 - 明确不进入本次需求池的范围。
 
-产出：`02-analysis/requirement-pool-goal.md`
+产出：`{目标文档目录}/requirement-pool-goal.md`
 
 ### 第 2 步：汇总需求来源
 
@@ -53,7 +53,7 @@
 - 保留每条需求的来源。
 - 合并重复或高度相似的需求。
 
-产出：`02-analysis/requirement-sources.md`
+产出：`{目标文档目录}/requirement-sources.md`
 
 ### 第 3 步：分类和标准化需求
 
@@ -62,7 +62,7 @@
 - 标记目标用户、场景和价值线索。
 - 标记信息不足项。
 
-产出：`02-analysis/requirement-normalization.md`
+产出：`{目标文档目录}/requirement-normalization.md`
 
 ### 第 4 步：标记需求状态
 
@@ -71,7 +71,7 @@
 - 明显不符合目标的需求进入拒绝或归档。
 - 有推进可能但当前不做的需求进入暂缓。
 
-产出：`02-analysis/requirement-status.md`
+产出：`{目标文档目录}/requirement-status.md`
 
 ### 第 5 步：确定下一步动作
 
@@ -79,7 +79,7 @@
 - 标记风险、依赖和待确认问题。
 - 给出维护建议。
 
-产出：`04-outputs/requirement-pool.md`
+产出：`{目标文档目录}/requirement-pool.md`
 
 ### 第 6 步：评审需求池
 

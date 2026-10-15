@@ -185,11 +185,12 @@ def capability_items():
     candidates = [
         ("想法转输入", "06-templates/meta/idea-to-input-generator.md", "可用", "把用户模糊想法整理成标准输入文档", "brain"),
         ("创建项目", "tools/create_project.py", "可用", "自动生成项目骨架、进度记录、决策记录和下一步判断", "play"),
+        ("资产索引", "12-projects/asset-index.md", "可用", "按能力查找角色包、工作流、模板、评分表、标准和脚本", "library"),
         ("可解释执行", "06-templates/meta/explainable-project-runner.md", "可用", "执行前说明，执行后解释，帮助用户把控方向", "brain"),
         ("项目运行", "06-templates/meta/project-runner.md", "可用", "按项目规则推进下一步并汇报进度", "compass"),
         ("输出评审", "06-templates/meta/output-reviewer.md", "可用", "检查准确性、完整性、结构性和可执行性", "check"),
         ("案例沉淀", "04-workflows/common/example-extraction-workflow.md", "已验证", "将高质量项目整理成案例包", "library"),
-        ("导图刷新", "tools/refresh_maps.py", "可用", "一键刷新三张 XMind 导图", "map"),
+        ("全局刷新", "tools/refresh_maps.py", "可用", "一键刷新项目索引、资产索引、控制台数据和 XMind 导图", "map"),
         ("知识提炼", "10-knowledge-base/patterns/framework-bootstrap-pattern.md", "已验证", "从案例提炼可复用模式", "boxes"),
     ]
     return [

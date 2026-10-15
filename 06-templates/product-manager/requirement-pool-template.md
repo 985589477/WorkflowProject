@@ -11,7 +11,7 @@
 本模板用于生成：
 
 ```text
-04-outputs/requirement-pool.md
+{目标文档目录}/requirement-pool.md
 ```
 
 ## 输入变量

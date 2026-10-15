@@ -13,6 +13,7 @@ ALLOWED_ROLES = {
     "product-manager",
     "developer",
     "ui-designer",
+    "tester",
     "researcher",
     "marketer",
 }
@@ -69,8 +70,8 @@ def write_readme(project_dir, role, project_type, name, title):
 
 ```text
 README.md
+00-progress/memory-summary.md
 00-progress/next-actions.md
-00-progress/progress-log.md
 ```
 
 然后对 AI 说：
@@ -86,6 +87,14 @@ README.md
 ```text
 00-progress/progress-log.md
 ```
+
+当前项目状态摘要记录到：
+
+```text
+00-progress/memory-summary.md
+```
+
+如果项目持续迭代很多轮，优先更新 `memory-summary.md`，不要让 AI 每次读取所有历史记录。
 
 ## 沉淀与提升
 
@@ -188,9 +197,72 @@ def write_next_actions(project_dir):
     next_actions_file.write_text(content, encoding="utf-8")
 
 
+def write_memory_summary(project_dir, title):
+    progress_dir = project_dir / "00-progress"
+    progress_dir.mkdir(exist_ok=True)
+    memory_file = progress_dir / "memory-summary.md"
+    if memory_file.exists():
+        return
+    content = f"""# 项目记忆摘要
+
+## 一句话定位
+
+《{title}》项目的当前状态摘要。
+
+## 当前目标
+
+待填写。
+
+## 当前阶段
+
+项目已创建。
+
+## 最近一次有效进展
+
+已创建项目骨架。
+
+## 已完成内容
+
+- 已创建 `00-progress/` 到 `06-lessons/` 项目结构。
+
+## 当前有效决策
+
+| 决策 | 原因 | 影响 | 来源 |
+| --- | --- | --- | --- |
+
+## 已废弃方向
+
+| 方向 | 废弃原因 | 替代方案 |
+| --- | --- | --- |
+
+## 关键风险与注意事项
+
+| 风险 | 影响 | 处理方式 |
+| --- | --- | --- |
+
+## 当前可用资产
+
+| 资产 | 位置 | 用途 |
+| --- | --- | --- |
+
+## 下一步
+
+- 把原始材料放入 `01-inputs/`。
+- 明确本项目要使用的角色、工作流和模板。
+
+## 需要追溯时再读
+
+| 文件 | 什么时候读 |
+| --- | --- |
+| `00-progress/progress-log.md` | 需要查看完整执行流水时。 |
+| `00-progress/decision-log.md` | 需要追溯重要决策原因时。 |
+"""
+    memory_file.write_text(content, encoding="utf-8")
+
+
 def main():
     parser = argparse.ArgumentParser(description="创建一个新的 WorkflowProject 任务项目。")
-    parser.add_argument("role", help="项目角色目录，例如 mixed、developer、product-manager、ui-designer")
+    parser.add_argument("role", help="项目角色目录，例如 mixed、developer、product-manager、ui-designer、tester")
     parser.add_argument("name", help="项目英文短名，例如 login-bug-fix")
     parser.add_argument("--type", default="real-cases", help="项目类型：capability-building、real-cases、experiments，默认 real-cases")
     parser.add_argument("--output", help="项目根目录路径。指定后直接在该路径创建项目内部结构，不再追加项目名。")
@@ -239,6 +311,7 @@ def main():
     write_progress_log(target_dir, title)
     write_decision_log(target_dir)
     write_next_actions(target_dir)
+    write_memory_summary(target_dir, title)
 
     print(f"已创建项目：{target_dir}")
     print("下一步：把原始材料或想法放入 01-inputs/，再阅读 00-system/quick-start.md。")

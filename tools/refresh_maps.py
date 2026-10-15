@@ -7,6 +7,7 @@ ROOT = Path(__file__).resolve().parents[1]
 
 SCRIPTS = [
     "tools/generate_project_index.py",
+    "tools/generate_asset_index.py",
     "tools/generate_dashboard_data.py",
     "tools/generate_xmind.py",
     "tools/generate_operation_flow_xmind.py",

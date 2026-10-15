@@ -11,7 +11,7 @@
 本模板用于生成：
 
 ```text
-04-outputs/version-retrospective.md
+{目标文档目录}/version-retrospective.md
 ```
 
 ## 输入变量

@@ -13,7 +13,82 @@
 4. 生成正式提示词
 5. 执行 AI 并保存输出
 6. 评审并决定是否沉淀
+
+## 如果你要让 AI 开发真实代码项目
+
+不要先从具体角色开始。先使用项目治理主流程：
+
+```text
+请先使用 project-governance-workflow 检查当前项目的规则、架构、模块、设计规范、任务列表和模块文档。
+如果缺少关键材料，请先列出缺口并和我确认；如果材料已经存在，请按项目文档规划并执行开发。
+不要在治理检查完成前直接大范围修改代码。
 ```
+
+对应文件：
+
+```text
+04-workflows/common/project-governance-workflow.md
+06-templates/common/project-governance-checklist-template.md
+05-standards/project-governance-standard.md
+```
+
+只有当治理流程判断确实需要专业能力时，才继续调用产品、UI、开发或测试角色。
+```
+
+## 如果只是想使用现成角色能力包
+
+如果你不是要创建 WorkflowProject 内部项目，而是想在其他项目里直接使用已经导出的角色能力包，优先看：
+
+```text
+14-exports/product-manager-kit/START-HERE.md
+14-exports/developer-kit/START-HERE.md
+14-exports/ui-designer-kit/START-HERE.md
+14-exports/tester-kit/START-HERE.md
+```
+
+产品经理任务：
+
+```text
+请使用 product-manager-kit 处理我的产品任务：{写下你的任务}
+```
+
+开发任务：
+
+```text
+请使用 developer-kit 协助我处理这个开发任务：{写下你的任务}
+```
+
+UI 设计任务：
+
+```text
+请使用 ui-designer-kit 处理我的设计任务：{写下你的任务}
+```
+
+测试任务：
+
+```text
+请使用 tester-kit 处理我的测试任务：{写下你的任务}
+```
+
+如果是第一次把能力包复制到外部项目，先看：
+
+```text
+14-exports/{kit-name}/INSTALL.md
+```
+
+如果要建设新的角色能力包，必须参考：
+
+```text
+05-standards/role-kit-lifecycle-standard.md
+```
+
+如果你不知道当前项目里有哪些能力可以直接用，先看：
+
+```text
+12-projects/asset-index.md
+```
+
+它按角色能力包、工作流、模板、评分表、标准和工具脚本整理可用资产。
 
 ## 第 1 步：创建项目
 
@@ -30,6 +105,7 @@ mixed              跨角色任务
 product-manager    产品经理任务
 developer          开发任务
 ui-designer        UI 设计任务
+tester             测试任务
 ```
 
 如果不知道该选哪个角色：
@@ -38,6 +114,7 @@ ui-designer        UI 设计任务
 写 PRD、需求分析、功能规划 -> product-manager
 代码实现、bug 修复、技术方案 -> developer
 页面设计、交互说明、组件说明 -> ui-designer
+测试计划、测试用例、回归范围 -> tester
 框架搭建、流程设计、多角色任务 -> mixed
 不确定归哪类 -> mixed
 ```
@@ -61,6 +138,14 @@ ui-designer        UI 设计任务
 ```text
 12-projects/{角色}/{项目类型}/{项目名}/00-progress/progress-log.md
 ```
+
+持续迭代项目的当前状态摘要会记录到：
+
+```text
+12-projects/{角色}/{项目类型}/{项目名}/00-progress/memory-summary.md
+```
+
+后续继续项目时，优先读 `memory-summary.md`，不要每次都读完整历史。
 
 常见项目类型：
 
@@ -157,6 +242,14 @@ AI 推断
 ```text
 00-progress/progress-log.md
 ```
+
+如果项目会持续迭代，还要在阶段结束时更新：
+
+```text
+00-progress/memory-summary.md
+```
+
+这样下一次继续项目时，AI 可以先读当前摘要，再按需追溯历史。
 
 对应规则见：
 
