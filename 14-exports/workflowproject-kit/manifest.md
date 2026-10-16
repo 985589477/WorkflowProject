@@ -1,7 +1,7 @@
 # 导出清单
 
 导出对象：WorkflowProject 统一开发治理能力包
-导出时间：2026-10-15T18:18+08:00
+导出时间：2026-10-15T18:35+08:00
 导出方式：`python3 tools/export_unified_kit.py`
 
 ## 包含能力
